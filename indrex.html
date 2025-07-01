@@ -46,6 +46,9 @@
             background-color: var(--body-bg);
             color: var(--text);
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         header {
@@ -388,11 +391,54 @@
             border: 2px solid var(--accent);
         }
         
+        /* Cross-promotion footer */
+        .website-promotion {
+            text-align: center;
+            margin-top: auto;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .promotion-box {
+            display: inline-block;
+            background-color: var(--secondary);
+            padding: 15px 30px;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .promotion-box:hover {
+            transform: translateY(-3px);
+        }
+        
+        .promotion-box p {
+            margin-bottom: 8px;
+            color: var(--neutral);
+            font-size: 14px;
+        }
+        
+        .promotion-box a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .credit {
+            color: var(--neutral);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        [data-theme="light"] .promotion-box {
+            background-color: var(--card-bg);
+        }
+
         footer {
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
             color: var(--neutral);
             font-size: 14px;
         }
@@ -801,10 +847,16 @@
         </section>
     </main>
 
-    <footer>
-        <p>Data updated in real-time from Forbes Billionaires List</p>
-        <p>© 2023 Billionaire Watch. All rights reserved.</p>
-    </footer>
+    <!-- Cross-promotion footer -->
+    <div class="website-promotion">
+        <div class="promotion-box">
+            <p>Try my other website:</p>
+            <a href="https://akshatkumar333.github.io/Multi-Calculator/" target="_blank">
+                Multi-Calculator
+            </a>
+        </div>
+        <div class="credit">Made by Akshat Kumar</div>
+    </div>
 
     <script>
         // Theme toggle functionality
