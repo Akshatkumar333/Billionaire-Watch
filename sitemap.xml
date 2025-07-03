@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://billionairewatch.in/</loc>
-  <lastmod>2025-07-03T14:09:43+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url>
+        <loc>https://billionairewatch.in/</loc>
+        <lastmod>2024-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Global Rankings -->
+    <url>
+        <loc>https://billionairewatch.in/top-10-billionaires</loc>
+        <lastmod>2024-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Indian Billionaires -->
+    <url>
+        <loc>https://billionairewatch.in/top-indian-billionaires</loc>
+        <lastmod>2024-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/mukesh-ambani</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/gautam-adani</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/shiv-nadar</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    
+    <!-- US Billionaires -->
+    <url>
+        <loc>https://billionairewatch.in/top-us-billionaires</loc>
+        <lastmod>2024-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/jeff-bezos</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/elon-musk</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/billionaire/bill-gates</loc>
+        <lastmod>2024-07-05</lastmod>
+    </url>
+    
+    <!-- Supporting Pages -->
+    <url>
+        <loc>https://billionairewatch.in/methodology</loc>
+        <lastmod>2024-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://billionairewatch.in/about</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
