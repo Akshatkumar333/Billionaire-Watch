@@ -191,29 +191,19 @@
             color: var(--accent);
         }
         
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-        
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--accent);
-        }
-        
+        <!-- Replace the entire <nav> section with this: -->
+<nav>
+    <ul>
+        <li><a href="#global">Global</a></li>
+        <li><a href="#india">India</a></li>
+        <li><a href="#usa">USA</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://billionairewatch.in/terms.html" class="terms-btn" target="_blank">
+            <i class="fas fa-file-contract"></i> Terms
+        </a></li>
+    </ul>
+</nav>        
         .policy-links {
             display: flex;
             gap: 15px;
@@ -1082,13 +1072,17 @@
             </a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 BillionaireWatch.in | <a href="/privacy.html">Privacy Policy</a> | <a href="/about.html">About Us</a> | <a href="mailto:contact@billionairewatch.in">Contact</a></p>
-        <p class="credit">Made by Akshat Kumar</p>
-    </footer>
-
-    <script>
+<!-- Replace the entire <footer> section with this: -->
+<footer>
+    <p>&copy; 2025 BillionaireWatch.in | 
+       <a href="/privacy.html">Privacy Policy</a> | 
+       <a href="https://billionairewatch.in/terms.html" target="_blank">Terms and Conditions</a> | 
+       <a href="/about.html">About Us</a> | 
+       <a href="mailto:contact@billionairewatch.in">Contact</a>
+    </p>
+    <p class="credit">Made by Akshat Kumar</p>
+</footer>
+       <script>
         // Current 2025 billionaire data
         const billionaireData = {
             global: [
