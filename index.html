@@ -191,19 +191,67 @@
             color: var(--accent);
         }
         
-        <!-- Replace the entire <nav> section with this: -->
-<nav>
+        <nav>
     <ul>
         <li><a href="#global">Global</a></li>
         <li><a href="#india">India</a></li>
         <li><a href="#usa">USA</a></li>
         <li><a href="#analysis">Analysis</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="https://billionairewatch.in/terms.html" class="terms-btn" target="_blank">
-            <i class="fas fa-file-contract"></i> Terms
-        </a></li>
     </ul>
-</nav>        
+</nav>
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    transition: all 0.3s;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* For the light theme */
+[data-theme="light"] nav a {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
         .policy-links {
             display: flex;
             gap: 15px;
@@ -308,7 +356,26 @@
             background-color: var(--accent);
             color: var(--primary);
         }
-        
+        .policy-links {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.policy-links a {
+    font-size: 14px;
+    color: var(--neutral);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+}
+
+.policy-links a:hover {
+    color: var(--accent);
+    background-color: var(--secondary);
+}
         .billionaire-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1076,13 +1143,12 @@
 <footer>
     <p>&copy; 2025 BillionaireWatch.in | 
        <a href="/privacy.html">Privacy Policy</a> | 
-       <a href="https://billionairewatch.in/terms.html" target="_blank">Terms and Conditions</a> | 
+       <a href="https://billionairewatch.in/terms.html" target="_blank">Terms</a> | 
        <a href="/about.html">About Us</a> | 
        <a href="mailto:contact@billionairewatch.in">Contact</a>
     </p>
     <p class="credit">Made by Akshat Kumar</p>
-</footer>
-       <script>
+</footer>       <script>
         // Current 2025 billionaire data
         const billionaireData = {
             global: [
