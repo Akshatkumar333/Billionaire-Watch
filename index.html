@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-2776727085751679">
-    <meta name="description" content="Track Mukesh Ambani, Elon Musk & top global billionaires' net worth in real-time. Daily updated rankings, wealth sources, and portfolio breakdowns.">
-    <title>Billionaire Wealth Tracker | Real-Time Net Worth Rankings</title>
+    <meta name="description" content="Track Elon Musk, Mukesh Ambani & top global billionaires' net worth in real-time (2025 data). Daily updated rankings, wealth sources, and portfolio breakdowns with expert analysis.">
+    <title>Billionaire Wealth Tracker 2025 | Real-Time Net Worth Rankings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- 
     <style>
         :root {
             --primary: #1a1a2e;
@@ -55,10 +54,122 @@
             display: flex;
             flex-direction: column;
         }
-    <header><a href="/">
-  <img src="/billioniare image.jpg" alt="BillionaireWatch - Real-Time Billionaire Wealth Tracker" width="200">
-</a></header>
-        header {
+
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            color: var(--text);
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px var(--shadow);
+        }
+        
+        .cookie-consent p {
+            margin: 0;
+            flex: 1;
+            min-width: 250px;
+            padding-right: 20px;
+        }
+        
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .cookie-accept {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .cookie-decline {
+            background-color: transparent;
+            color: var(--text);
+            border: 1px solid var(--text);
+        }
+        
+        /* Content Improvements */
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .intro-content p {
+            margin-bottom: 15px;
+        }
+        
+        .article-section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        .article-section h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .article-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .article-section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .article-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .privacy-link {
+            color: var(--accent);
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading-spinner i {
+            font-size: 30px;
+            color: var(--accent);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -80,6 +191,12 @@
             color: var(--accent);
         }
         
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
         nav ul {
             display: flex;
             gap: 20px;
@@ -97,11 +214,36 @@
             color: var(--accent);
         }
         
+        .policy-links {
+            display: flex;
+            gap: 15px;
+            margin-left: 20px;
+        }
+        
+        .policy-links a {
+            font-size: 14px;
+            color: var(--neutral);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .policy-links a:hover {
+            color: var(--accent);
+        }
+        
         .header-controls {
             display: flex;
             align-items: center;
             gap: 20px;
         }
+        
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
         
         .market-status {
             display: flex;
@@ -448,6 +590,16 @@
             padding: 20px 0;
             color: var(--neutral);
             font-size: 14px;
+            margin-top: 40px;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
@@ -466,10 +618,29 @@
                 justify-content: space-between;
                 margin-top: 15px;
             }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent p {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. <a href="/privacy.html" class="privacy-link">Privacy Policy</a></p>
+        <div class="cookie-consent-buttons">
+            <button class="cookie-btn cookie-accept" id="acceptCookies">Accept</button>
+            <button class="cookie-btn cookie-decline" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
     <header>
         <div class="logo">
             <i class="fas fa-crown"></i>
@@ -480,7 +651,8 @@
                 <li><a href="#global">Global</a></li>
                 <li><a href="#india">India</a></li>
                 <li><a href="#usa">USA</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
         <div class="header-controls">
@@ -495,18 +667,38 @@
     </header>
 
     <main>
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <i class="fas fa-spinner"></i>
+            <p>Loading real-time billionaire data...</p>
+        </div>
+
+        <!-- Introduction Content -->
+        <section class="intro-content">
+            <h1>2025 Real-Time Billionaire Wealth Tracker</h1>
+            <p>Welcome to BillionaireWatch.in, your premier destination for tracking the net worth of the world's wealthiest individuals in real-time. Our platform provides up-to-the-minute updates on billionaire fortunes, analyzing market movements and their impact on personal wealth in 2025.</p>
+            <p>Unlike static lists, our dynamic tracking system reflects live changes in stock prices, company valuations, and other assets that contribute to these massive fortunes. Below you'll find our current rankings with detailed breakdowns of each billionaire's wealth sources.</p>
+        </section>
+
+        <!-- Featured Article Section -->
+        <section class="article-section" id="analysis">
+            <h3>2025 Wealth Trends: Tech Titans Continue to Dominate</h3>
+            <p>In 2025, the tech industry continues to produce the world's wealthiest individuals, with Elon Musk maintaining his position at the top with an astonishing $368 billion net worth. Mark Zuckerberg's strategic pivots in AI and virtual reality have propelled him to the #2 position globally.</p>
+            <p>The most notable change is <a href="#elon-musk">Elon Musk's</a> continued dominance across multiple industries, while <a href="#mark-zuckerberg">Mark Zuckerberg</a> has seen remarkable growth through Meta's AI advancements. Traditional industries still maintain strong representation, but tech innovation remains the primary driver of billionaire wealth creation.</p>
+        </section>
+
         <section id="global">
             <div class="section-header">
-                <h1>Top 10 Billionaires in the World</h1>
+                <h2>Top 10 Billionaires in the World (2025)</h2>
                 <button class="refresh-btn" id="refresh-global">
                     <i class="fas fa-sync-alt"></i>
                     Refresh
                 </button>
             </div>
             
-            <div class="billionaire-grid">
+            <div class="billionaire-grid" id="global-billionaires">
                 <!-- Elon Musk -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="elon-musk">
                     <div class="rank-badge">1</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk" class="profile-img" alt="Elon Musk">
                     <div class="crown-animation">
@@ -516,131 +708,131 @@
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 100%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+2.4%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.5%</span> today
                         </div>
                     </div>
                     
                     <h3>Elon Musk</h3>
-                    <p class="net-worth">$<span class="wealth-value">215.6</span>B</p>
-                    <p class="primary-source">Tesla, SpaceX, X (Twitter)</p>
+                    <p class="net-worth">$<span class="wealth-value">368</span>B</p>
+                    <p class="primary-source">Tesla, SpaceX, X</p>
                     
                     <div class="wealth-animation" id="elon-animation"></div>
                 </div>
                 
-                <!-- Jeff Bezos -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">2</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos" class="profile-img" alt="Jeff Bezos">
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 92%"></div>
-                        <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.1%</span> today
-                        </div>
-                    </div>
-                    
-                    <h3>Jeff Bezos</h3>
-                    <p class="net-worth">$<span class="wealth-value">198.2</span>B</p>
-                    <p class="primary-source">Amazon, Blue Origin</p>
-                    
-                    <div class="wealth-animation" id="jeff-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
-                </div>
-                
-                <!-- Bernard Arnault -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">3</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault" class="profile-img" alt="Bernard Arnault">
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 88%"></div>
-                        <div class="wealth-change down">
-                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.8%</span> today
-                        </div>
-                    </div>
-                    
-                    <h3>Bernard Arnault</h3>
-                    <p class="net-worth">$<span class="wealth-value">189.3</span>B</p>
-                    <p class="primary-source">LVMH</p>
-                    
-                    <div class="wealth-animation" id="bernard-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=FR" class="country-flag" alt="France Flag">
-                </div>
-                
-                <!-- Bill Gates -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">4</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates" class="profile-img" alt="Bill Gates">
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 85%"></div>
-                        <div class="wealth-change neutral">
-                            <i class="fas fa-equals"></i> <span class="change-value">0.0%</span> today
-                        </div>
-                    </div>
-                    
-                    <h3>Bill Gates</h3>
-                    <p class="net-worth">$<span class="wealth-value">183.5</span>B</p>
-                    <p class="primary-source">Microsoft, Investments</p>
-                    
-                    <div class="wealth-animation" id="bill-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
-                </div>
-                
                 <!-- Mark Zuckerberg -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">5</div>
+                <div class="billionaire-card" id="mark-zuckerberg">
+                    <div class="rank-badge">2</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg" class="profile-img" alt="Mark Zuckerberg">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 78%"></div>
+                        <div class="wealth-bar" style="width: 66%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+3.2%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+2.1%</span> today
                         </div>
                     </div>
                     
                     <h3>Mark Zuckerberg</h3>
-                    <p class="net-worth">$<span class="wealth-value">167.9</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">243</span>B</p>
                     <p class="primary-source">Meta (Facebook)</p>
                     
                     <div class="wealth-animation" id="mark-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
                 
+                <!-- Jeff Bezos -->
+                <div class="billionaire-card" id="jeff-bezos">
+                    <div class="rank-badge">3</div>
+                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos" class="profile-img" alt="Jeff Bezos">
+                    
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: 62%"></div>
+                        <div class="wealth-change up">
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.8%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>Jeff Bezos</h3>
+                    <p class="net-worth">$<span class="wealth-value">229</span>B</p>
+                    <p class="primary-source">Amazon, Blue Origin</p>
+                    
+                    <div class="wealth-animation" id="jeff-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                </div>
+                
                 <!-- Larry Ellison -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">6</div>
+                <div class="billionaire-card" id="larry-ellison">
+                    <div class="rank-badge">4</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison" class="profile-img" alt="Larry Ellison">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 72%"></div>
+                        <div class="wealth-bar" style="width: 52%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.5%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.2%</span> today
                         </div>
                     </div>
                     
                     <h3>Larry Ellison</h3>
-                    <p class="net-worth">$<span class="wealth-value">154.8</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">192</span>B</p>
                     <p class="primary-source">Oracle</p>
                     
                     <div class="wealth-animation" id="larry-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
                 
+                <!-- Bill Gates -->
+                <div class="billionaire-card" id="bill-gates">
+                    <div class="rank-badge">5</div>
+                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates" class="profile-img" alt="Bill Gates">
+                    
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: 48%"></div>
+                        <div class="wealth-change neutral">
+                            <i class="fas fa-equals"></i> <span class="change-value">0.0%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>Bill Gates</h3>
+                    <p class="net-worth">$<span class="wealth-value">176</span>B</p>
+                    <p class="primary-source">Microsoft, Investments</p>
+                    
+                    <div class="wealth-animation" id="bill-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                </div>
+                
+                <!-- Steve Ballmer -->
+                <div class="billionaire-card" id="steve-ballmer">
+                    <div class="rank-badge">6</div>
+                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer" class="profile-img" alt="Steve Ballmer">
+                    
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: 44%"></div>
+                        <div class="wealth-change up">
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.7%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>Steve Ballmer</h3>
+                    <p class="net-worth">$<span class="wealth-value">161</span>B</p>
+                    <p class="primary-source">Microsoft, LA Clippers</p>
+                    
+                    <div class="wealth-animation" id="steve-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                </div>
+                
                 <!-- Warren Buffett -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="warren-buffett">
                     <div class="rank-badge">7</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett" class="profile-img" alt="Warren Buffett">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 68%"></div>
+                        <div class="wealth-bar" style="width: 42%"></div>
                         <div class="wealth-change down">
-                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.5%</span> today
+                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.3%</span> today
                         </div>
                     </div>
                     
                     <h3>Warren Buffett</h3>
-                    <p class="net-worth">$<span class="wealth-value">146.2</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">154</span>B</p>
                     <p class="primary-source">Berkshire Hathaway</p>
                     
                     <div class="wealth-animation" id="warren-animation"></div>
@@ -648,76 +840,89 @@
                 </div>
                 
                 <!-- Larry Page -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="larry-page">
                     <div class="rank-badge">8</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page" class="profile-img" alt="Larry Page">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 65%"></div>
+                        <div class="wealth-bar" style="width: 42%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.8%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.1%</span> today
                         </div>
                     </div>
                     
                     <h3>Larry Page</h3>
-                    <p class="net-worth">$<span class="wealth-value">139.7</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">153</span>B</p>
                     <p class="primary-source">Google (Alphabet)</p>
                     
                     <div class="wealth-animation" id="larryp-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
                 
-                <!-- Sergey Brin -->
-                <div class="billionaire-card">
+                <!-- Bernard Arnault -->
+                <div class="billionaire-card" id="bernard-arnault">
                     <div class="rank-badge">9</div>
+                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault" class="profile-img" alt="Bernard Arnault">
+                    
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: 42%"></div>
+                        <div class="wealth-change down">
+                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.5%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>Bernard Arnault</h3>
+                    <p class="net-worth">$<span class="wealth-value">153</span>B</p>
+                    <p class="primary-source">LVMH</p>
+                    
+                    <div class="wealth-animation" id="bernard-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=FR" class="country-flag" alt="France Flag">
+                </div>
+                
+                <!-- Sergey Brin -->
+                <div class="billionaire-card" id="sergey-brin">
+                    <div class="rank-badge">10</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin" class="profile-img" alt="Sergey Brin">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 63%"></div>
+                        <div class="wealth-bar" style="width: 39%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.7%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.9%</span> today
                         </div>
                     </div>
                     
                     <h3>Sergey Brin</h3>
-                    <p class="net-worth">$<span class="wealth-value">135.4</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">143</span>B</p>
                     <p class="primary-source">Google (Alphabet)</p>
                     
                     <div class="wealth-animation" id="sergey-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
-                
-                <!-- Steve Ballmer -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">10</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer" class="profile-img" alt="Steve Ballmer">
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 60%"></div>
-                        <div class="wealth-change down">
-                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.3%</span> today
-                        </div>
-                    </div>
-                    
-                    <h3>Steve Ballmer</h3>
-                    <p class="net-worth">$<span class="wealth-value">130.1</span>B</p>
-                    <p class="primary-source">Microsoft, LA Clippers</p>
-                    
-                    <div class="wealth-animation" id="steve-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
-                </div>
             </div>
+        </section>
+
+        <!-- Additional Content Section -->
+        <section class="article-section">
+            <h3>Understanding 2025 Billionaire Wealth Composition</h3>
+            <p>The net worth of the world's richest individuals in 2025 remains heavily tied to their ownership stakes in both technology and traditional companies. However, the sources of wealth have diversified significantly:</p>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li>Elon Musk's wealth comes from Tesla (EVs), SpaceX (space exploration), and X (social media)</li>
+                <li>Mark Zuckerberg's fortune is primarily Meta (Facebook, VR, AI technologies)</li>
+                <li>Jeff Bezos maintains wealth through Amazon and space venture Blue Origin</li>
+                <li>Traditional industries like luxury goods (Bernard Arnault) and investments (Warren Buffett) still hold strong</li>
+            </ul>
+            <p>Our tracking methodology combines real-time public market data with the latest available private company valuations to provide the most accurate billionaire net worth figures.</p>
         </section>
 
         <section class="country-section" id="india">
             <div class="country-header">
                 <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag-large" alt="India Flag">
-                <h2>Top 3 Billionaires in India</h2>
+                <h2>Top 3 Billionaires in India (2025)</h2>
             </div>
             
-            <div class="country-billionaires">
+            <div class="country-billionaires" id="india-billionaires">
                 <!-- Mukesh Ambani -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="mukesh-ambani">
                     <div class="rank-badge">1</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani" class="profile-img" alt="Mukesh Ambani">
                     <div class="crown-animation">
@@ -727,12 +932,12 @@
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 100%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.2%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.1%</span> today
                         </div>
                     </div>
                     
                     <h3>Mukesh Ambani</h3>
-                    <p class="net-worth">$<span class="wealth-value">102.1</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">91.8</span>B</p>
                     <p class="primary-source">Reliance Industries</p>
                     
                     <div class="wealth-animation" id="mukesh-animation"></div>
@@ -740,19 +945,19 @@
                 </div>
                 
                 <!-- Gautam Adani -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="gautam-adani">
                     <div class="rank-badge">2</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani" class="profile-img" alt="Gautam Adani">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 85%"></div>
+                        <div class="wealth-bar" style="width: 66%"></div>
                         <div class="wealth-change down">
-                            <i class="fas fa-arrow-down"></i> <span class="change-value">-2.1%</span> today
+                            <i class="fas fa-arrow-down"></i> <span class="change-value">-0.8%</span> today
                         </div>
                     </div>
                     
                     <h3>Gautam Adani</h3>
-                    <p class="net-worth">$<span class="wealth-value">86.5</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">60.8</span>B</p>
                     <p class="primary-source">Adani Group</p>
                     
                     <div class="wealth-animation" id="gautam-animation"></div>
@@ -760,19 +965,19 @@
                 </div>
                 
                 <!-- Shiv Nadar -->
-                <div class="billionaire-card">
+                <div class="billionaire-card" id="shiv-nadar">
                     <div class="rank-badge">3</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar" class="profile-img" alt="Shiv Nadar">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 65%"></div>
+                        <div class="wealth-bar" style="width: 38%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.8%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.5%</span> today
                         </div>
                     </div>
                     
                     <h3>Shiv Nadar</h3>
-                    <p class="net-worth">$<span class="wealth-value">65.3</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">34.9</span>B</p>
                     <p class="primary-source">HCL Technologies</p>
                     
                     <div class="wealth-animation" id="shiv-animation"></div>
@@ -784,11 +989,11 @@
         <section class="country-section" id="usa">
             <div class="country-header">
                 <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag-large" alt="USA Flag">
-                <h2>Top 3 Billionaires in USA</h2>
+                <h2>Top 3 Billionaires in USA (2025)</h2>
             </div>
             
-            <div class="country-billionaires">
-                <!-- Elon Musk (already in global) -->
+            <div class="country-billionaires" id="usa-billionaires">
+                <!-- Elon Musk -->
                 <div class="billionaire-card">
                     <div class="rank-badge">1</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk" class="profile-img" alt="Elon Musk">
@@ -799,58 +1004,72 @@
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 100%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+2.4%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.5%</span> today
                         </div>
                     </div>
                     
                     <h3>Elon Musk</h3>
-                    <p class="net-worth">$<span class="wealth-value">215.6</span>B</p>
-                    <p class="primary-source">Tesla, SpaceX, X (Twitter)</p>
+                    <p class="net-worth">$<span class="wealth-value">368</span>B</p>
+                    <p class="primary-source">Tesla, SpaceX, X</p>
                     
                     <div class="wealth-animation" id="elon-usa-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
                 
-                <!-- Jeff Bezos (already in global) -->
+                <!-- Mark Zuckerberg -->
                 <div class="billionaire-card">
                     <div class="rank-badge">2</div>
+                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg" class="profile-img" alt="Mark Zuckerberg">
+                    
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: 66%"></div>
+                        <div class="wealth-change up">
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+2.1%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>Mark Zuckerberg</h3>
+                    <p class="net-worth">$<span class="wealth-value">243</span>B</p>
+                    <p class="primary-source">Meta (Facebook)</p>
+                    
+                    <div class="wealth-animation" id="mark-usa-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                </div>
+                
+                <!-- Jeff Bezos -->
+                <div class="billionaire-card">
+                    <div class="rank-badge">3</div>
                     <img src="https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos" class="profile-img" alt="Jeff Bezos">
                     
                     <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 92%"></div>
+                        <div class="wealth-bar" style="width: 62%"></div>
                         <div class="wealth-change up">
-                            <i class="fas fa-arrow-up"></i> <span class="change-value">+1.1%</span> today
+                            <i class="fas fa-arrow-up"></i> <span class="change-value">+0.8%</span> today
                         </div>
                     </div>
                     
                     <h3>Jeff Bezos</h3>
-                    <p class="net-worth">$<span class="wealth-value">198.2</span>B</p>
+                    <p class="net-worth">$<span class="wealth-value">229</span>B</p>
                     <p class="primary-source">Amazon, Blue Origin</p>
                     
                     <div class="wealth-animation" id="jeff-usa-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
-                
-                <!-- Bill Gates (already in global) -->
-                <div class="billionaire-card">
-                    <div class="rank-badge">3</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates" class="profile-img" alt="Bill Gates">
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: 85%"></div>
-                        <div class="wealth-change neutral">
-                            <i class="fas fa-equals"></i> <span class="change-value">0.0%</span> today
-                        </div>
-                    </div>
-                    
-                    <h3>Bill Gates</h3>
-                    <p class="net-worth">$<span class="wealth-value">183.5</span>B</p>
-                    <p class="primary-source">Microsoft, Investments</p>
-                    
-                    <div class="wealth-animation" id="bill-usa-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
-                </div>
             </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="article-section" id="about">
+            <h3>About BillionaireWatch.in</h3>
+            <p>BillionaireWatch.in is an independent platform dedicated to tracking the net worth of the world's wealthiest individuals in real-time. Our mission is to provide transparent, accurate data on billionaire fortunes with insightful analysis of the factors driving wealth creation in 2025.</p>
+            <p>Our methodology combines:</p>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li>Real-time stock price data for publicly traded holdings</li>
+                <li>The latest available private company valuations</li>
+                <li>Verified information on asset sales and purchases</li>
+                <li>Currency exchange rates updated every 15 minutes</li>
+            </ul>
+            <p>We update our figures continuously during market hours and perform comprehensive reviews after each trading session to ensure accuracy.</p>
         </section>
     </main>
 
@@ -862,10 +1081,208 @@
                 Multi-Calculator
             </a>
         </div>
-        <div class="credit">Made by Akshat Kumar</div>
     </div>
 
+    <footer>
+        <p>&copy; 2025 BillionaireWatch.in | <a href="/privacy.html">Privacy Policy</a> | <a href="/about.html">About Us</a> | <a href="mailto:contact@billionairewatch.in">Contact</a></p>
+        <p class="credit">Made by Akshat Kumar</p>
+    </footer>
+
     <script>
+        // Current 2025 billionaire data
+        const billionaireData = {
+            global: [
+                {
+                    id: "elon-musk",
+                    name: "Elon Musk",
+                    netWorth: 368,
+                    dailyChange: 1.5,
+                    source: "Tesla, SpaceX, X",
+                    country: "US",
+                    rank: 1,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                },
+                {
+                    id: "mark-zuckerberg",
+                    name: "Mark Zuckerberg",
+                    netWorth: 243,
+                    dailyChange: 2.1,
+                    source: "Meta (Facebook)",
+                    country: "US",
+                    rank: 2,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                },
+                {
+                    id: "jeff-bezos",
+                    name: "Jeff Bezos",
+                    netWorth: 229,
+                    dailyChange: 0.8,
+                    source: "Amazon, Blue Origin",
+                    country: "US",
+                    rank: 3,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                },
+                {
+                    id: "larry-ellison",
+                    name: "Larry Ellison",
+                    netWorth: 192,
+                    dailyChange: 1.2,
+                    source: "Oracle",
+                    country: "US",
+                    rank: 4,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison"
+                },
+                {
+                    id: "bill-gates",
+                    name: "Bill Gates",
+                    netWorth: 176,
+                    dailyChange: 0.0,
+                    source: "Microsoft, Investments",
+                    country: "US",
+                    rank: 5,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates"
+                },
+                {
+                    id: "steve-ballmer",
+                    name: "Steve Ballmer",
+                    netWorth: 161,
+                    dailyChange: 0.7,
+                    source: "Microsoft, LA Clippers",
+                    country: "US",
+                    rank: 6,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer"
+                },
+                {
+                    id: "warren-buffett",
+                    name: "Warren Buffett",
+                    netWorth: 154,
+                    dailyChange: -0.3,
+                    source: "Berkshire Hathaway",
+                    country: "US",
+                    rank: 7,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett"
+                },
+                {
+                    id: "larry-page",
+                    name: "Larry Page",
+                    netWorth: 153,
+                    dailyChange: 1.1,
+                    source: "Google (Alphabet)",
+                    country: "US",
+                    rank: 8,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page"
+                },
+                {
+                    id: "bernard-arnault",
+                    name: "Bernard Arnault",
+                    netWorth: 153,
+                    dailyChange: -0.5,
+                    source: "LVMH",
+                    country: "FR",
+                    rank: 9,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault"
+                },
+                {
+                    id: "sergey-brin",
+                    name: "Sergey Brin",
+                    netWorth: 143,
+                    dailyChange: 0.9,
+                    source: "Google (Alphabet)",
+                    country: "US",
+                    rank: 10,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin"
+                }
+            ],
+            india: [
+                {
+                    id: "mukesh-ambani",
+                    name: "Mukesh Ambani",
+                    netWorth: 91.8,
+                    dailyChange: 1.1,
+                    source: "Reliance Industries",
+                    country: "IN",
+                    rank: 1,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani"
+                },
+                {
+                    id: "gautam-adani",
+                    name: "Gautam Adani",
+                    netWorth: 60.8,
+                    dailyChange: -0.8,
+                    source: "Adani Group",
+                    country: "IN",
+                    rank: 2,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani"
+                },
+                {
+                    id: "shiv-nadar",
+                    name: "Shiv Nadar",
+                    netWorth: 34.9,
+                    dailyChange: 0.5,
+                    source: "HCL Technologies",
+                    country: "IN",
+                    rank: 3,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar"
+                }
+            ],
+            usa: [
+                {
+                    id: "elon-musk",
+                    name: "Elon Musk",
+                    netWorth: 368,
+                    dailyChange: 1.5,
+                    source: "Tesla, SpaceX, X",
+                    country: "US",
+                    rank: 1,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                },
+                {
+                    id: "mark-zuckerberg",
+                    name: "Mark Zuckerberg",
+                    netWorth: 243,
+                    dailyChange: 2.1,
+                    source: "Meta (Facebook)",
+                    country: "US",
+                    rank: 2,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                },
+                {
+                    id: "jeff-bezos",
+                    name: "Jeff Bezos",
+                    netWorth: 229,
+                    dailyChange: 0.8,
+                    source: "Amazon, Blue Origin",
+                    country: "US",
+                    rank: 3,
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                }
+            ]
+        };
+
+        // Cookie Consent Functionality
+        const cookieConsent = document.getElementById('cookieConsent');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const declineCookies = document.getElementById('declineCookies');
+        
+        // Check if user has already made a choice
+        if (document.cookie.includes('cookieConsent=')) {
+            cookieConsent.style.display = 'none';
+        } else {
+            cookieConsent.style.display = 'flex';
+        }
+        
+        // Handle accept button
+        acceptCookies.addEventListener('click', function() {
+            document.cookie = "cookieConsent=accepted; max-age=2592000; path=/"; // 30 days
+            cookieConsent.style.display = 'none';
+        });
+        
+        // Handle decline button
+        declineCookies.addEventListener('click', function() {
+            document.cookie = "cookieConsent=declined; max-age=2592000; path=/"; // 30 days
+            cookieConsent.style.display = 'none';
+        });
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -933,84 +1350,90 @@
             }, 3000);
         }
         
-        // Function to simulate real-time wealth changes
-        function simulateWealthChanges() {
-            const wealthValues = document.querySelectorAll('.wealth-value');
-            const changeValues = document.querySelectorAll('.change-value');
-            const wealthChanges = document.querySelectorAll('.wealth-change');
+        // Function to update billionaire cards with new data
+        function updateBillionaireCards(data, sectionId) {
+            const container = document.getElementById(sectionId);
+            if (!container) return;
             
-            wealthValues.forEach((value, index) => {
-                const currentValue = parseFloat(value.textContent);
-                const changeElement = changeValues[index];
-                const wealthChangeElement = wealthChanges[index];
+            // Clear existing cards
+            container.innerHTML = '';
+            
+            // Create new cards
+            data.forEach(billionaire => {
+                const isProfit = billionaire.dailyChange >= 0;
+                const changeClass = isProfit ? 'up' : (billionaire.dailyChange === 0 ? 'neutral' : 'down');
+                const changeIcon = isProfit ? 'arrow-up' : (billionaire.dailyChange === 0 ? 'equals' : 'arrow-down');
                 
-                // Random small fluctuation
-                const fluctuation = (Math.random() * 0.4 - 0.2); // -0.2 to +0.2
-                const newValue = currentValue + fluctuation;
+                const card = document.createElement('div');
+                card.className = 'billionaire-card';
+                card.id = billionaire.id;
                 
-                // Determine if it's profit or loss
-                const isProfit = fluctuation >= 0;
-                const percentChange = (Math.abs(fluctuation) / currentValue * 100).toFixed(1);
-                
-                // Update display
-                value.textContent = newValue.toFixed(1);
-                changeElement.textContent = `${isProfit ? '+' : '-'}${percentChange}%`;
-                
-                // Update change element class
-                if (fluctuation === 0) {
-                    wealthChangeElement.className = 'wealth-change neutral';
-                    wealthChangeElement.innerHTML = `<i class="fas fa-equals"></i> <span class="change-value">0.0%</span> today`;
-                } else {
-                    wealthChangeElement.className = `wealth-change ${isProfit ? 'up' : 'down'}`;
-                    wealthChangeElement.innerHTML = 
-                        `<i class="fas fa-arrow-${isProfit ? 'up' : 'down'}"></i> <span class="change-value">${isProfit ? '+' : '-'}${percentChange}%</span> today`;
-                }
-                
-                // Create visual effect
-                if (Math.abs(fluctuation) > 0.1) {
-                    createMoneyChange(value.parentElement, isProfit);
+                card.innerHTML = `
+                    <div class="rank-badge">${billionaire.rank}</div>
+                    <img src="${billionaire.image}" class="profile-img" alt="${billionaire.name}">
+                    ${billionaire.rank === 1 ? '<div class="crown-animation"><i class="fas fa-crown"></i></div>' : ''}
                     
-                    if (isProfit) {
-                        createCoins(['elon-animation', 'mukesh-animation', 'jeff-animation'][index] || `billionaire-${index}-animation`);
-                    }
+                    <div class="wealth-meter">
+                        <div class="wealth-bar" style="width: ${(billionaire.netWorth / data[0].netWorth) * 100}%"></div>
+                        <div class="wealth-change ${changeClass}">
+                            <i class="fas fa-${changeIcon}"></i> <span class="change-value">${billionaire.dailyChange >= 0 ? '+' : ''}${billionaire.dailyChange}%</span> today
+                        </div>
+                    </div>
+                    
+                    <h3>${billionaire.name}</h3>
+                    <p class="net-worth">$<span class="wealth-value">${billionaire.netWorth.toFixed(1)}</span>B</p>
+                    <p class="primary-source">${billionaire.source}</p>
+                    
+                    <div class="wealth-animation" id="${billionaire.id}-animation"></div>
+                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=${billionaire.country}" class="country-flag" alt="${billionaire.country} Flag">
+                `;
+                
+                container.appendChild(card);
+                
+                // Add animations for top gainers
+                if (billionaire.dailyChange > 1) {
+                    createCoins(`${billionaire.id}-animation`);
                 }
             });
-            
-            // Re-sort billionaires based on new values
-            sortBillionaires();
         }
         
-        // Function to sort billionaires by net worth
-        function sortBillionaires() {
-            const globalSection = document.querySelector('#global .billionaire-grid');
-            const cards = Array.from(globalSection.querySelectorAll('.billionaire-card'));
+        // Function to fetch real-time data from API
+        async function fetchRealTimeData() {
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            loadingSpinner.style.display = 'block';
             
-            // Sort cards by net worth (descending)
-            cards.sort((a, b) => {
-                const aValue = parseFloat(a.querySelector('.wealth-value').textContent);
-                const bValue = parseFloat(b.querySelector('.wealth-value').textContent);
-                return bValue - aValue;
-            });
-            
-            // Update ranks and re-append cards
-            cards.forEach((card, index) => {
-                const rankBadge = card.querySelector('.rank-badge');
-                rankBadge.textContent = index + 1;
+            try {
+                // In a real implementation, you would call your API here
+                // Example: const response = await fetch('https://api.billionairewatch.in/data');
+                // const data = await response.json();
                 
-                // Add/remove crown for #1
-                const crown = card.querySelector('.crown-animation');
-                if (index === 0 && !crown) {
-                    const crownDiv = document.createElement('div');
-                    crownDiv.className = 'crown-animation';
-                    crownDiv.innerHTML = '<i class="fas fa-crown"></i>';
-                    card.appendChild(crownDiv);
-                } else if (index !== 0 && crown) {
-                    crown.remove();
-                }
+                // For now, we'll simulate API delay and use our static data
+                await new Promise(resolve => setTimeout(resolve, 1000));
                 
-                // Re-append to maintain order
-                globalSection.appendChild(card);
-            });
+                // Simulate small changes to the data
+                const updatedData = JSON.parse(JSON.stringify(billionaireData));
+                updatedData.global.forEach(b => {
+                    // Random fluctuation between -0.5% and +0.5%
+                    const fluctuation = (Math.random() - 0.5) / 100;
+                    b.netWorth = b.netWorth * (1 + fluctuation);
+                    b.dailyChange = (parseFloat(b.dailyChange) + (Math.random() - 0.5)).toFixed(1);
+                });
+                
+                // Update all sections
+                updateBillionaireCards(updatedData.global, 'global-billionaires');
+                updateBillionaireCards(updatedData.india, 'india-billionaires');
+                updateBillionaireCards(updatedData.usa, 'usa-billionaires');
+                
+                updateTime();
+            } catch (error) {
+                console.error('Error fetching real-time data:', error);
+                // Fall back to static data if API fails
+                updateBillionaireCards(billionaireData.global, 'global-billionaires');
+                updateBillionaireCards(billionaireData.india, 'india-billionaires');
+                updateBillionaireCards(billionaireData.usa, 'usa-billionaires');
+            } finally {
+                loadingSpinner.style.display = 'none';
+            }
         }
         
         // Update time function
@@ -1032,45 +1455,32 @@
             this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
             this.disabled = true;
             
-            // Simulate data refresh
-            setTimeout(() => {
+            fetchRealTimeData().then(() => {
                 this.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh';
                 this.disabled = false;
-                updateTime();
-                simulateWealthChanges();
-            }, 1500);
+            });
         });
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            updateTime();
+            // Initial render with static data
+            updateBillionaireCards(billionaireData.global, 'global-billionaires');
+            updateBillionaireCards(billionaireData.india, 'india-billionaires');
+            updateBillionaireCards(billionaireData.usa, 'usa-billionaires');
             
-            // Initial animations
-            animateAllWealth();
+            updateTime();
             
             // Set up real-time updates
             setInterval(updateTime, 1000);
-            setInterval(simulateWealthChanges, 5000);
+            setInterval(fetchRealTimeData, 300000); // Update every 5 minutes
             
             // Continuous animations for top billionaires
             setInterval(() => {
-                createCoins('elon-animation');
-                createCoins('mukesh-animation');
-                createCoins('jeff-animation');
+                createCoins('elon-musk-animation');
+                createCoins('mark-zuckerberg-animation');
+                createCoins('jeff-bezos-animation');
             }, 3000);
         });
-        
-        function animateAllWealth() {
-            const billionaireIds = [
-                'elon', 'jeff', 'bernard', 'bill', 'mark',
-                'larry', 'warren', 'larryp', 'sergey', 'steve',
-                'mukesh', 'gautam', 'shiv'
-            ];
-            
-            billionaireIds.forEach(id => {
-                createCoins(`${id}-animation`);
-            });
-        }
     </script>
 </body>
 </html>
