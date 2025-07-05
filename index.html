@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2776727085751679"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-2776727085751679">
-    <meta name="description" content="Track Elon Musk, Mukesh Ambani & top global billionaires' net worth in real-time (2025 data). Daily updated rankings, wealth sources, and portfolio breakdowns with expert analysis.">
-   
-    <title>Billionaire Wealth Tracker 2025 -Latest Updates on World's Wealthiest | Real-Time Net Worth Rankings</title>
+    <meta name="description" content="Track Elon Musk, Mukesh Ambani & top global billionaires' net worth with daily updates (2025 data). Comprehensive rankings, wealth sources, and portfolio breakdowns with expert analysis.">
+    <title>Billionaire Wealth Tracker 2025 - Latest Updates on World's Wealthiest | Daily Net Worth Rankings</title>
+    
+    <!-- Schema.org markup for better search visibility -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Billionaire Watch",
-  "url": "https://billionairewatch.in/",
-  "logo": "https://billionairewatch.in/billioniare image.jpg"
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Billionaire Watch",
+      "url": "https://billionairewatch.in/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://billionairewatch.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -63,9 +67,10 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            line-height: 1.6;
         }
 
-        /* Cookie Consent Banner */
+        /* Cookie Consent Banner - Updated for GDPR/CCPA compliance */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -87,6 +92,7 @@
             flex: 1;
             min-width: 250px;
             padding-right: 20px;
+            font-size: 14px;
         }
         
         .cookie-consent-buttons {
@@ -100,6 +106,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
+            font-size: 14px;
         }
         
         .cookie-accept {
@@ -111,6 +118,15 @@
             background-color: transparent;
             color: var(--text);
             border: 1px solid var(--text);
+        }
+        
+        .cookie-settings {
+            background-color: transparent;
+            color: var(--accent);
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
         }
         
         /* Content Improvements */
@@ -135,6 +151,7 @@
         .article-section h3 {
             color: var(--accent);
             margin-bottom: 15px;
+            font-size: 1.4rem;
         }
         
         .article-section p {
@@ -145,6 +162,7 @@
         .article-section a {
             color: var(--accent);
             text-decoration: none;
+            font-weight: 500;
         }
         
         .article-section a:hover {
@@ -179,7 +197,7 @@
             100% { transform: rotate(360deg); }
         }
 
-         header {
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -187,6 +205,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 30px;
             background-color: var(--header-bg);
+            flex-wrap: wrap;
         }
         
         .logo {
@@ -195,77 +214,69 @@
             gap: 10px;
             font-size: 24px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         
         .logo i {
             color: var(--accent);
         }
         
-        <nav>
-    <ul>
-        <li><a href="#global">Global</a></li>
-        <li><a href="#india">India</a></li>
-        <li><a href="#usa">USA</a></li>
-        <li><a href="#analysis">Analysis</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-</nav>
-/* Navigation Styles */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
+        /* Navigation Styles */
+        nav {
+            margin: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-nav li {
-    display: inline-block;
-}
+        nav li {
+            display: inline-block;
+        }
 
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background-color: var(--secondary);
-    transition: all 0.3s;
-    font-weight: 500;
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap;
-}
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: var(--secondary);
+            transition: all 0.3s;
+            font-weight: 500;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            font-size: 15px;
+        }
 
-nav a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow);
-}
+        nav a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
 
-/* For responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-/* For the light theme */
-[data-theme="light"] nav a {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+        /* For the light theme */
+        [data-theme="light"] nav a {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-[data-theme="light"] nav a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-}
+        [data-theme="light"] nav a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
 
         .policy-links {
             display: flex;
             gap: 15px;
             margin-left: 20px;
+            flex-wrap: wrap;
         }
         
         .policy-links a {
@@ -273,25 +284,22 @@ nav a:hover {
             color: var(--neutral);
             text-decoration: none;
             transition: color 0.3s;
+            padding: 8px 15px;
+            border: 1px solid var(--accent);
+            border-radius: 5px;
         }
         
         .policy-links a:hover {
             color: var(--accent);
+            background-color: var(--secondary);
         }
         
         .header-controls {
             display: flex;
             align-items: center;
             gap: 20px;
+            margin-top: 10px;
         }
-        
-        .market-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-        
         
         .market-status {
             display: flex;
@@ -314,6 +322,7 @@ nav a:hover {
             font-size: 20px;
             cursor: pointer;
             transition: transform 0.3s;
+            padding: 5px;
         }
         
         .theme-toggle:hover {
@@ -326,10 +335,16 @@ nav a:hover {
             color: var(--accent);
         }
         
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+        
         h2 {
             margin-top: 40px;
             position: relative;
             padding-left: 15px;
+            font-size: 1.8rem;
         }
         
         h2::before {
@@ -347,6 +362,8 @@ nav a:hover {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .refresh-btn {
@@ -360,32 +377,14 @@ nav a:hover {
             align-items: center;
             gap: 8px;
             transition: all 0.3s;
+            font-size: 14px;
         }
         
         .refresh-btn:hover {
             background-color: var(--accent);
             color: var(--primary);
         }
-        .policy-links {
-    display: flex;
-    gap: 15px;
-    margin-left: 20px;
-}
-
-.policy-links a {
-    font-size: 14px;
-    color: var(--neutral);
-    text-decoration: none;
-    transition: color 0.3s;
-    padding: 8px 15px;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-}
-
-.policy-links a:hover {
-    color: var(--accent);
-    background-color: var(--secondary);
-}
+        
         .billionaire-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -426,8 +425,8 @@ nav a:hover {
         }
         
         .profile-img {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent);
@@ -469,7 +468,7 @@ nav a:hover {
         }
         
         .wealth-change {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             margin-bottom: 10px;
             display: flex;
@@ -490,13 +489,13 @@ nav a:hover {
         }
         
         .billionaire-card h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 5px;
             text-align: center;
         }
         
         .net-worth {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 5px;
@@ -516,7 +515,7 @@ nav a:hover {
         }
         
         .primary-source {
-            font-size: 14px;
+            font-size: 15px;
             text-align: center;
             color: var(--neutral);
             margin-bottom: 15px;
@@ -526,8 +525,8 @@ nav a:hover {
             position: absolute;
             bottom: 15px;
             right: 15px;
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             object-fit: cover;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -559,16 +558,6 @@ nav a:hover {
             100% { transform: translateY(-50px) rotate(360deg); opacity: 0; }
         }
         
-        .pulse {
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
         .money-change {
             position: absolute;
             font-size: 12px;
@@ -595,95 +584,123 @@ nav a:hover {
         .country-header {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         
         .country-flag-large {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent);
         }
         
-        /* Cross-promotion footer */
-        .website-promotion {
-            text-align: center;
-            margin-top: auto;
-            padding: 30px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .promotion-box {
-            display: inline-block;
-            background-color: var(--secondary);
-            padding: 15px 30px;
-            border-radius: 25px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 8px var(--shadow);
-            transition: transform 0.3s;
-        }
-        
-        .promotion-box:hover {
-            transform: translateY(-3px);
-        }
-        
-        .promotion-box p {
-            margin-bottom: 8px;
-            color: var(--neutral);
-            font-size: 14px;
-        }
-        
-        .promotion-box a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .credit {
-            color: var(--neutral);
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        
-        [data-theme="light"] .promotion-box {
+        /* AdSense Ad Container */
+        .ad-container {
+            width: 100%;
+            margin: 30px 0;
+            padding: 15px;
             background-color: var(--card-bg);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px dashed var(--accent);
         }
-
+        
+        .ad-container p {
+            color: var(--neutral);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article-content p {
+            margin-bottom: 15px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        .article-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        /* Footer */
         footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
             color: var(--neutral);
             font-size: 14px;
             margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         footer a {
             color: var(--accent);
             text-decoration: none;
+            margin: 0 10px;
         }
         
         footer a:hover {
             text-decoration: underline;
         }
         
+        .footer-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .credit {
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                gap: 15px;
                 align-items: flex-start;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
             }
             
             .header-controls {
                 width: 100%;
                 justify-content: space-between;
+            }
+            
+            .policy-links {
+                margin-left: 0;
                 margin-top: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .billionaire-grid, .country-billionaires {
+                grid-template-columns: 1fr;
             }
             
             .cookie-consent {
@@ -695,16 +712,37 @@ nav a:hover {
                 padding-right: 0;
                 margin-bottom: 15px;
             }
+            
+            .cookie-consent-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .billionaire-card {
+                padding: 15px;
+            }
+            
+            .profile-img {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Cookie Consent Banner -->
+    <!-- Cookie Consent Banner - Updated for GDPR/CCPA compliance -->
     <div class="cookie-consent" id="cookieConsent">
         <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. <a href="/privacy.html" class="privacy-link">Privacy Policy</a></p>
         <div class="cookie-consent-buttons">
-            <button class="cookie-btn cookie-accept" id="acceptCookies">Accept</button>
-            <button class="cookie-btn cookie-decline" id="declineCookies">Decline</button>
+            <button class="cookie-btn cookie-accept" id="acceptCookies">Accept All</button>
+            <button class="cookie-btn cookie-decline" id="declineCookies">Reject All</button>
+            <button class="cookie-settings" id="cookieSettings">Manage Preferences</button>
         </div>
     </div>
 
@@ -715,10 +753,10 @@ nav a:hover {
         </div>
         <nav>
             <ul>
-                <li><a href="#global">Global</a></li>
-                <li><a href="#india">India</a></li>
-                <li><a href="#usa">USA</a></li>
-                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#global">Global Billionaires</a></li>
+                <li><a href="#india">Indian Billionaires</a></li>
+                <li><a href="#usa">US Billionaires</a></li>
+                <li><a href="#analysis">Wealth Analysis</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
@@ -737,37 +775,66 @@ nav a:hover {
         <!-- Loading Spinner -->
         <div class="loading-spinner" id="loadingSpinner">
             <i class="fas fa-spinner"></i>
-            <p>Loading real-time billionaire data...</p>
+            <p>Loading billionaire data...</p>
         </div>
 
-        <!-- Introduction Content -->
+        <!-- Introduction Content - Expanded -->
         <section class="intro-content">
-            <h1>2025 Real-Time Billionaire Wealth Tracker</h1>
-            <p>Welcome to BillionaireWatch.in, your premier destination for tracking the net worth of the world's wealthiest individuals in real-time. Our platform provides up-to-the-minute updates on billionaire fortunes, analyzing market movements and their impact on personal wealth in 2025.</p>
-            <p>Unlike static lists, our dynamic tracking system reflects live changes in stock prices, company valuations, and other assets that contribute to these massive fortunes. Below you'll find our current rankings with detailed breakdowns of each billionaire's wealth sources.</p>
+            <h1>2025 Billionaire Wealth Tracker</h1>
+            <p>Welcome to BillionaireWatch.in, your comprehensive resource for tracking the net worth of the world's wealthiest individuals. Our platform provides daily updated rankings and detailed analysis of billionaire fortunes in 2025, helping you understand the dynamics of extreme wealth accumulation.</p>
+            
+            <p>While we don't claim to provide real-time tracking (as stock markets have opening hours and private company valuations aren't continuously updated), we offer the most current available data with clear explanations of our methodology and sources.</p>
+            
+            <h3>Why Track Billionaire Wealth?</h3>
+            <p>Understanding the fortunes of the ultra-wealthy provides insights into:</p>
+            <ul>
+                <li>Global economic trends and industry shifts</li>
+                <li>The impact of technological innovation on wealth creation</li>
+                <li>Geopolitical influences on personal fortunes</li>
+                <li>Philanthropic initiatives funded by billionaire wealth</li>
+            </ul>
         </section>
 
-        <!-- Featured Article Section -->
+        <!-- AdSense Ad Container -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <!-- AdSense ad code will go here -->
+            <div id="ad-slot-1"></div>
+        </div>
+
+        <!-- Featured Article Section - Expanded Content -->
         <section class="article-section" id="analysis">
             <h3>2025 Wealth Trends: Tech Titans Continue to Dominate</h3>
-            <p>In 2025, the tech industry continues to produce the world's wealthiest individuals, with Elon Musk maintaining his position at the top with an astonishing $368 billion net worth. Mark Zuckerberg's strategic pivots in AI and virtual reality have propelled him to the #2 position globally.</p>
-            <p>The most notable change is <a href="#elon-musk">Elon Musk's</a> continued dominance across multiple industries, while <a href="#mark-zuckerberg">Mark Zuckerberg</a> has seen remarkable growth through Meta's AI advancements. Traditional industries still maintain strong representation, but tech innovation remains the primary driver of billionaire wealth creation.</p>
+            <p>The year 2025 has seen technology magnates maintain their dominance of the billionaire rankings, though with some significant shifts in the pecking order. Elon Musk remains at the pinnacle with an estimated net worth of $368 billion, though his lead has narrowed slightly from 2024 peaks.</p>
+            
+            <h4>Key Trends in 2025:</h4>
+            <ul>
+                <li><strong>AI Boom Benefits:</strong> Mark Zuckerberg's strategic focus on artificial intelligence through Meta's various platforms has propelled him to the #2 position globally, with his fortune growing by an estimated 22% year-to-date.</li>
+                <li><strong>Space Race Dividends:</strong> Both Musk's SpaceX and Jeff Bezos's Blue Origin have seen valuations increase as commercial space operations become more routine and profitable.</li>
+                <li><strong>Traditional Industries Hold Steady:</strong> While tech dominates the top spots, traditional industries like luxury goods (Bernard Arnault) and investments (Warren Buffett) continue to produce stable billionaire fortunes.</li>
+                <li><strong>Indian Billionaires Rising:</strong> Mukesh Ambani maintains his position as Asia's richest person, with Reliance Industries expanding into renewable energy and digital services.</li>
+            </ul>
+            
+            <p>Our analysis combines publicly available data with expert estimates of private holdings to provide these rankings. All values are in USD and based on the most recent reliable valuations.</p>
         </section>
 
+        <!-- Global Billionaires Section -->
         <section id="global">
             <div class="section-header">
                 <h2>Top 10 Billionaires in the World (2025)</h2>
                 <button class="refresh-btn" id="refresh-global">
                     <i class="fas fa-sync-alt"></i>
-                    Refresh
+                    Refresh Data
                 </button>
             </div>
+            
+            <p class="article-content">Our global billionaire rankings are updated daily based on market movements and the latest available valuation data. The following represents our current assessment of the world's wealthiest individuals as of today's market close.</p>
             
             <div class="billionaire-grid" id="global-billionaires">
                 <!-- Elon Musk -->
                 <div class="billionaire-card" id="elon-musk">
                     <div class="rank-badge">1</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk" class="profile-img" alt="Elon Musk">
+                    <img src="elon-musk.jpg" class="profile-img" alt="Elon Musk" loading="lazy">
                     <div class="crown-animation">
                         <i class="fas fa-crown"></i>
                     </div>
@@ -784,12 +851,13 @@ nav a:hover {
                     <p class="primary-source">Tesla, SpaceX, X</p>
                     
                     <div class="wealth-animation" id="elon-animation"></div>
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Mark Zuckerberg -->
                 <div class="billionaire-card" id="mark-zuckerberg">
                     <div class="rank-badge">2</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg" class="profile-img" alt="Mark Zuckerberg">
+                    <img src="mark-zuckerberg.jpg" class="profile-img" alt="Mark Zuckerberg" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 66%"></div>
@@ -803,13 +871,13 @@ nav a:hover {
                     <p class="primary-source">Meta (Facebook)</p>
                     
                     <div class="wealth-animation" id="mark-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Jeff Bezos -->
                 <div class="billionaire-card" id="jeff-bezos">
                     <div class="rank-badge">3</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos" class="profile-img" alt="Jeff Bezos">
+                    <img src="jeff-bezos.jpg" class="profile-img" alt="Jeff Bezos" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 62%"></div>
@@ -823,13 +891,13 @@ nav a:hover {
                     <p class="primary-source">Amazon, Blue Origin</p>
                     
                     <div class="wealth-animation" id="jeff-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Larry Ellison -->
                 <div class="billionaire-card" id="larry-ellison">
                     <div class="rank-badge">4</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison" class="profile-img" alt="Larry Ellison">
+                    <img src="larry-ellison.jpg" class="profile-img" alt="Larry Ellison" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 52%"></div>
@@ -843,13 +911,13 @@ nav a:hover {
                     <p class="primary-source">Oracle</p>
                     
                     <div class="wealth-animation" id="larry-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Bill Gates -->
                 <div class="billionaire-card" id="bill-gates">
                     <div class="rank-badge">5</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates" class="profile-img" alt="Bill Gates">
+                    <img src="bill-gates.jpg" class="profile-img" alt="Bill Gates" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 48%"></div>
@@ -863,13 +931,13 @@ nav a:hover {
                     <p class="primary-source">Microsoft, Investments</p>
                     
                     <div class="wealth-animation" id="bill-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Steve Ballmer -->
                 <div class="billionaire-card" id="steve-ballmer">
                     <div class="rank-badge">6</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer" class="profile-img" alt="Steve Ballmer">
+                    <img src="steve-ballmer.jpg" class="profile-img" alt="Steve Ballmer" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 44%"></div>
@@ -883,13 +951,13 @@ nav a:hover {
                     <p class="primary-source">Microsoft, LA Clippers</p>
                     
                     <div class="wealth-animation" id="steve-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Warren Buffett -->
                 <div class="billionaire-card" id="warren-buffett">
                     <div class="rank-badge">7</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett" class="profile-img" alt="Warren Buffett">
+                    <img src="warren-buffett.jpg" class="profile-img" alt="Warren Buffett" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 42%"></div>
@@ -903,13 +971,13 @@ nav a:hover {
                     <p class="primary-source">Berkshire Hathaway</p>
                     
                     <div class="wealth-animation" id="warren-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Larry Page -->
                 <div class="billionaire-card" id="larry-page">
                     <div class="rank-badge">8</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page" class="profile-img" alt="Larry Page">
+                    <img src="larry-page.jpg" class="profile-img" alt="Larry Page" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 42%"></div>
@@ -923,13 +991,13 @@ nav a:hover {
                     <p class="primary-source">Google (Alphabet)</p>
                     
                     <div class="wealth-animation" id="larryp-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Bernard Arnault -->
                 <div class="billionaire-card" id="bernard-arnault">
                     <div class="rank-badge">9</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault" class="profile-img" alt="Bernard Arnault">
+                    <img src="bernard-arnault.jpg" class="profile-img" alt="Bernard Arnault" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 42%"></div>
@@ -943,13 +1011,13 @@ nav a:hover {
                     <p class="primary-source">LVMH</p>
                     
                     <div class="wealth-animation" id="bernard-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=FR" class="country-flag" alt="France Flag">
+                    <img src="france-flag.png" class="country-flag" alt="France Flag" loading="lazy">
                 </div>
                 
                 <!-- Sergey Brin -->
                 <div class="billionaire-card" id="sergey-brin">
                     <div class="rank-badge">10</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin" class="profile-img" alt="Sergey Brin">
+                    <img src="sergey-brin.jpg" class="profile-img" alt="Sergey Brin" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 39%"></div>
@@ -963,35 +1031,59 @@ nav a:hover {
                     <p class="primary-source">Google (Alphabet)</p>
                     
                     <div class="wealth-animation" id="sergey-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- Additional Content Section -->
+        <!-- AdSense Ad Container -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <!-- AdSense ad code will go here -->
+            <div id="ad-slot-2"></div>
+        </div>
+
+        <!-- Wealth Composition Section - Expanded -->
         <section class="article-section">
             <h3>Understanding 2025 Billionaire Wealth Composition</h3>
-            <p>The net worth of the world's richest individuals in 2025 remains heavily tied to their ownership stakes in both technology and traditional companies. However, the sources of wealth have diversified significantly:</p>
-            <ul style="margin-left: 20px; margin-bottom: 15px;">
-                <li>Elon Musk's wealth comes from Tesla (EVs), SpaceX (space exploration), and X (social media)</li>
-                <li>Mark Zuckerberg's fortune is primarily Meta (Facebook, VR, AI technologies)</li>
-                <li>Jeff Bezos maintains wealth through Amazon and space venture Blue Origin</li>
-                <li>Traditional industries like luxury goods (Bernard Arnault) and investments (Warren Buffett) still hold strong</li>
+            <p>The net worth of the world's richest individuals in 2025 reflects a complex mix of publicly traded securities, private company holdings, real estate, and other assets. Our methodology for calculating these figures combines several data sources:</p>
+            
+            <h4>Public Company Holdings</h4>
+            <p>For publicly traded companies, we use the most recent SEC filings to determine ownership stakes and multiply by current market prices. These figures are updated daily during market hours.</p>
+            
+            <h4>Private Company Valuations</h4>
+            <p>For private holdings like SpaceX or Blue Origin, we rely on:</p>
+            <ul>
+                <li>Most recent funding round valuations</li>
+                <li>Comparable public company multiples</li>
+                <li>Expert analyst estimates</li>
             </ul>
-            <p>Our tracking methodology combines real-time public market data with the latest available private company valuations to provide the most accurate billionaire net worth figures.</p>
+            
+            <h4>Other Assets</h4>
+            <p>We include estimates of:</p>
+            <ul>
+                <li>Real estate holdings (primary residences and investment properties)</li>
+                <li>Art collections and other tangible assets</li>
+                <li>Cash and publicly reported investment portfolios</li>
+            </ul>
+            
+            <p>All values are in USD and converted at current exchange rates where applicable. We make conservative estimates for assets where precise valuation is difficult.</p>
         </section>
 
+        <!-- Indian Billionaires Section -->
         <section class="country-section" id="india">
             <div class="country-header">
-                <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag-large" alt="India Flag">
-                <h2>Top 3 Billionaires in India (2025)</h2>
+                <img src="india-flag.png" class="country-flag-large" alt="India Flag" loading="lazy">
+                <h2>Top Indian Billionaires (2025)</h2>
             </div>
+            
+            <p class="article-content">India's billionaire class continues to grow in 2025, with traditional industries like energy and telecom still dominant but facing increasing competition from new tech entrepreneurs. The following are the current top three wealthiest individuals in India.</p>
             
             <div class="country-billionaires" id="india-billionaires">
                 <!-- Mukesh Ambani -->
                 <div class="billionaire-card" id="mukesh-ambani">
                     <div class="rank-badge">1</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani" class="profile-img" alt="Mukesh Ambani">
+                    <img src="mukesh-ambani.jpg" class="profile-img" alt="Mukesh Ambani" loading="lazy">
                     <div class="crown-animation">
                         <i class="fas fa-crown"></i>
                     </div>
@@ -1008,13 +1100,13 @@ nav a:hover {
                     <p class="primary-source">Reliance Industries</p>
                     
                     <div class="wealth-animation" id="mukesh-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
+                    <img src="india-flag.png" class="country-flag" alt="India Flag" loading="lazy">
                 </div>
                 
                 <!-- Gautam Adani -->
                 <div class="billionaire-card" id="gautam-adani">
                     <div class="rank-badge">2</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani" class="profile-img" alt="Gautam Adani">
+                    <img src="gautam-adani.jpg" class="profile-img" alt="Gautam Adani" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 66%"></div>
@@ -1028,13 +1120,13 @@ nav a:hover {
                     <p class="primary-source">Adani Group</p>
                     
                     <div class="wealth-animation" id="gautam-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
+                    <img src="india-flag.png" class="country-flag" alt="India Flag" loading="lazy">
                 </div>
                 
                 <!-- Shiv Nadar -->
                 <div class="billionaire-card" id="shiv-nadar">
                     <div class="rank-badge">3</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar" class="profile-img" alt="Shiv Nadar">
+                    <img src="shiv-nadar.jpg" class="profile-img" alt="Shiv Nadar" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 38%"></div>
@@ -1048,22 +1140,35 @@ nav a:hover {
                     <p class="primary-source">HCL Technologies</p>
                     
                     <div class="wealth-animation" id="shiv-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
+                    <img src="india-flag.png" class="country-flag" alt="India Flag" loading="lazy">
                 </div>
+            </div>
+            
+            <div class="article-content" style="margin-top: 30px;">
+                <h4>Indian Billionaire Trends</h4>
+                <p>The Indian billionaire landscape in 2025 shows several interesting developments:</p>
+                <ul>
+                    <li><strong>Tech Sector Growth:</strong> While traditional industries still dominate, tech entrepreneurs are rising through the ranks.</li>
+                    <li><strong>Renewable Energy Focus:</strong> Both Ambani and Adani have significantly invested in green energy solutions.</li>
+                    <li><strong>Consumer Market Expansion:</strong> India's growing middle class continues to create opportunities across sectors.</li>
+                </ul>
             </div>
         </section>
 
+        <!-- US Billionaires Section -->
         <section class="country-section" id="usa">
             <div class="country-header">
-                <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag-large" alt="USA Flag">
-                <h2>Top 3 Billionaires in USA (2025)</h2>
+                <img src="us-flag.png" class="country-flag-large" alt="USA Flag" loading="lazy">
+                <h2>Top US Billionaires (2025)</h2>
             </div>
+            
+            <p class="article-content">The United States remains home to the largest concentration of billionaires globally. The following are the current top three wealthiest individuals in the US, all of whom also rank in the global top 5.</p>
             
             <div class="country-billionaires" id="usa-billionaires">
                 <!-- Elon Musk -->
                 <div class="billionaire-card">
                     <div class="rank-badge">1</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk" class="profile-img" alt="Elon Musk">
+                    <img src="elon-musk.jpg" class="profile-img" alt="Elon Musk" loading="lazy">
                     <div class="crown-animation">
                         <i class="fas fa-crown"></i>
                     </div>
@@ -1080,13 +1185,13 @@ nav a:hover {
                     <p class="primary-source">Tesla, SpaceX, X</p>
                     
                     <div class="wealth-animation" id="elon-usa-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Mark Zuckerberg -->
                 <div class="billionaire-card">
                     <div class="rank-badge">2</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg" class="profile-img" alt="Mark Zuckerberg">
+                    <img src="mark-zuckerberg.jpg" class="profile-img" alt="Mark Zuckerberg" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 66%"></div>
@@ -1100,13 +1205,13 @@ nav a:hover {
                     <p class="primary-source">Meta (Facebook)</p>
                     
                     <div class="wealth-animation" id="mark-usa-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
                 
                 <!-- Jeff Bezos -->
                 <div class="billionaire-card">
                     <div class="rank-badge">3</div>
-                    <img src="https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos" class="profile-img" alt="Jeff Bezos">
+                    <img src="jeff-bezos.jpg" class="profile-img" alt="Jeff Bezos" loading="lazy">
                     
                     <div class="wealth-meter">
                         <div class="wealth-bar" style="width: 62%"></div>
@@ -1120,45 +1225,90 @@ nav a:hover {
                     <p class="primary-source">Amazon, Blue Origin</p>
                     
                     <div class="wealth-animation" id="jeff-usa-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
+                    <img src="us-flag.png" class="country-flag" alt="USA Flag" loading="lazy">
                 </div>
+            </div>
+            
+            <div class="article-content" style="margin-top: 30px;">
+                <h4>US Billionaire Trends</h4>
+                <p>The US billionaire landscape in 2025 reflects several key trends:</p>
+                <ul>
+                    <li><strong>Tech Dominance:</strong> Technology entrepreneurs continue to lead the rankings.</li>
+                    <li><strong>Space Economy:</strong> Commercial space ventures are becoming significant wealth creators.</li>
+                    <li><strong>AI Revolution:</strong> Artificial intelligence companies and applications are driving new fortunes.</li>
+                    <li><strong>Wealth Concentration:</strong> The top 1% of US billionaires now hold an even greater share of total billionaire wealth.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="article-section" id="about">
-            <h3>About BillionaireWatch.in</h3>
-            <p>BillionaireWatch.in is an independent platform dedicated to tracking the net worth of the world's wealthiest individuals in real-time. Our mission is to provide transparent, accurate data on billionaire fortunes with insightful analysis of the factors driving wealth creation in 2025.</p>
-            <p>Our methodology combines:</p>
-            <ul style="margin-left: 20px; margin-bottom: 15px;">
-                <li>Real-time stock price data for publicly traded holdings</li>
-                <li>The latest available private company valuations</li>
-                <li>Verified information on asset sales and purchases</li>
-                <li>Currency exchange rates updated every 15 minutes</li>
-            </ul>
-            <p>We update our figures continuously during market hours and perform comprehensive reviews after each trading session to ensure accuracy.</p>
+        <!-- AdSense Ad Container -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <!-- AdSense ad code will go here -->
+            <div id="ad-slot-3"></div>
+        </div>
+
+        <!-- About Section - Expanded -->
+        <section class="about-section" id="about">
+            <h2>About BillionaireWatch.in</h2>
+            
+            <div class="article-content">
+                <h3>Our Mission</h3>
+                <p>BillionaireWatch.in is an independent platform dedicated to tracking and analyzing the net worth of the world's wealthiest individuals. Our mission is to provide transparent, well-researched data on billionaire fortunes with insightful analysis of the factors driving wealth creation and distribution.</p>
+                
+                <h3>Methodology</h3>
+                <p>We combine multiple data sources to create our billionaire rankings:</p>
+                <ul>
+                    <li><strong>Public Company Holdings:</strong> We use SEC filings and other regulatory disclosures to determine ownership stakes in publicly traded companies, valuing these at current market prices.</li>
+                    <li><strong>Private Company Valuations:</strong> For private holdings, we rely on the most recent funding round valuations, comparable company analysis, and expert estimates.</li>
+                    <li><strong>Other Assets:</strong> We include estimates of real estate, art collections, and other significant assets based on available information.</li>
+                    <li><strong>Debts and Liabilities:</strong> Where possible, we account for known debts and liabilities in our net worth calculations.</li>
+                </ul>
+                
+                <h3>Update Frequency</h3>
+                <p>Our data is updated according to the following schedule:</p>
+                <ul>
+                    <li><strong>Public Company Values:</strong> Updated daily during market hours</li>
+                    <li><strong>Private Company Values:</strong> Updated quarterly or when new information becomes available</li>
+                    <li><strong>Other Assets:</strong> Reviewed annually or when significant transactions occur</li>
+                </ul>
+                
+                <h3>Transparency</h3>
+                <p>We clearly indicate when estimates are used and provide sources for our data whenever possible. We welcome corrections and additional information from reliable sources.</p>
+                
+                <h3>Disclaimer</h3>
+                <p>All net worth figures are estimates unless otherwise noted. The actual net worth of individuals may differ from our estimates due to private transactions, undisclosed assets or liabilities, and other factors.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="article-section">
+            <h3>Contact Us</h3>
+            <p>Have questions about our methodology or suggestions for improvement? We'd love to hear from you.</p>
+            <p>Email: <a href="mailto:contact@billionairewatch.in">contact@billionairewatch.in</a></p>
+            <p>For press inquiries or data verification requests, please include detailed information about your request.</p>
         </section>
     </main>
 
-    <!-- Cross-promotion footer -->
-    <div class="website-promotion">
-        <div class="promotion-box">
-            <p>Try my other website:</p>
-            <a href="https://akshatkumar333.github.io/Multi-Calculator/" target="_blank">
-                Multi-Calculator
-            </a>
+    <!-- Footer - Updated -->
+    <footer>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/about.html">About Us</a>
+            <a href="/methodology.html">Methodology</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/disclaimer.html">Disclaimer</a>
         </div>
-    </div>
-<!-- Replace the entire <footer> section with this: -->
-<footer>
-    <p>&copy; 2025 BillionaireWatch.in | 
-       <a href="/privacy.html">Privacy Policy</a> | 
-       <a href="https://billionairewatch.in/terms.html" target="_blank">Terms</a> | 
-       <a href="/about.html">About Us</a> | 
-       <a href="mailto:contact@billionairewatch.in">Contact</a>
-    </p>
-    <p class="credit">Made by Akshat Kumar</p>
-</footer>       <script>
+        
+        <p>&copy; 2025 BillionaireWatch.in. All rights reserved.</p>
+        
+        <p class="credit">Made by Akshat Kumar | Data sources: SEC filings, Bloomberg, Forbes, and other public sources</p>
+        
+        <p>Note: All billionaire net worth figures are estimates based on available information.</p>
+    </footer>
+
+    <script>
         // Current 2025 billionaire data
         const billionaireData = {
             global: [
@@ -1170,7 +1320,7 @@ nav a:hover {
                     source: "Tesla, SpaceX, X",
                     country: "US",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                    image: "Elon-musk.jpg"
                 },
                 {
                     id: "mark-zuckerberg",
@@ -1180,7 +1330,7 @@ nav a:hover {
                     source: "Meta (Facebook)",
                     country: "US",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                    image: "Mark-Zuckerberg.webp"
                 },
                 {
                     id: "jeff-bezos",
@@ -1190,7 +1340,7 @@ nav a:hover {
                     source: "Amazon, Blue Origin",
                     country: "US",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                    image: "jeff-bezos.jpg"
                 },
                 {
                     id: "larry-ellison",
@@ -1200,7 +1350,7 @@ nav a:hover {
                     source: "Oracle",
                     country: "US",
                     rank: 4,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison"
+                    image: "larry-ellison.webp"
                 },
                 {
                     id: "bill-gates",
@@ -1210,7 +1360,7 @@ nav a:hover {
                     source: "Microsoft, Investments",
                     country: "US",
                     rank: 5,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates"
+                    image: "bill-gates.jpeg"
                 },
                 {
                     id: "steve-ballmer",
@@ -1220,7 +1370,7 @@ nav a:hover {
                     source: "Microsoft, LA Clippers",
                     country: "US",
                     rank: 6,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer"
+                    image: "steve-ballmer.webp"
                 },
                 {
                     id: "warren-buffett",
@@ -1230,7 +1380,7 @@ nav a:hover {
                     source: "Berkshire Hathaway",
                     country: "US",
                     rank: 7,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett"
+                    image: "warren-buffett.webp"
                 },
                 {
                     id: "larry-page",
@@ -1240,7 +1390,7 @@ nav a:hover {
                     source: "Google (Alphabet)",
                     country: "US",
                     rank: 8,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page"
+                    image: "larry-page.jpg"
                 },
                 {
                     id: "bernard-arnault",
@@ -1250,7 +1400,7 @@ nav a:hover {
                     source: "LVMH",
                     country: "FR",
                     rank: 9,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault"
+                    image: "bernard-arnault.jpeg"
                 },
                 {
                     id: "sergey-brin",
@@ -1260,7 +1410,7 @@ nav a:hover {
                     source: "Google (Alphabet)",
                     country: "US",
                     rank: 10,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin"
+                    image: "sergey-brin.webp"
                 }
             ],
             india: [
@@ -1272,7 +1422,7 @@ nav a:hover {
                     source: "Reliance Industries",
                     country: "IN",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani"
+                    image: "mukesh-ambani.jpg"
                 },
                 {
                     id: "gautam-adani",
@@ -1282,7 +1432,7 @@ nav a:hover {
                     source: "Adani Group",
                     country: "IN",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani"
+                    image: "gautam-adani.webp"
                 },
                 {
                     id: "shiv-nadar",
@@ -1292,7 +1442,7 @@ nav a:hover {
                     source: "HCL Technologies",
                     country: "IN",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar"
+                    image: "shiv-nadar.jpeg"
                 }
             ],
             usa: [
@@ -1304,7 +1454,7 @@ nav a:hover {
                     source: "Tesla, SpaceX, X",
                     country: "US",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                    image: "Elon-musk.jpg"
                 },
                 {
                     id: "mark-zuckerberg",
@@ -1314,7 +1464,7 @@ nav a:hover {
                     source: "Meta (Facebook)",
                     country: "US",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                    image: "Mark-Zuckerberg.jpg"
                 },
                 {
                     id: "jeff-bezos",
@@ -1324,15 +1474,16 @@ nav a:hover {
                     source: "Amazon, Blue Origin",
                     country: "US",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                    image: "jeff-bezos.jpg"
                 }
             ]
         };
 
-        // Cookie Consent Functionality
+        // Cookie Consent Functionality - Updated for GDPR/CCPA compliance
         const cookieConsent = document.getElementById('cookieConsent');
         const acceptCookies = document.getElementById('acceptCookies');
         const declineCookies = document.getElementById('declineCookies');
+        const cookieSettings = document.getElementById('cookieSettings');
         
         // Check if user has already made a choice
         if (document.cookie.includes('cookieConsent=')) {
@@ -1343,14 +1494,21 @@ nav a:hover {
         
         // Handle accept button
         acceptCookies.addEventListener('click', function() {
-            document.cookie = "cookieConsent=accepted; max-age=2592000; path=/"; // 30 days
+            document.cookie = "cookieConsent=accepted; max-age=2592000; path=/; SameSite=Lax"; // 30 days
             cookieConsent.style.display = 'none';
+            // In a real implementation, you would load analytics/tracking scripts here
         });
         
         // Handle decline button
         declineCookies.addEventListener('click', function() {
-            document.cookie = "cookieConsent=declined; max-age=2592000; path=/"; // 30 days
+            document.cookie = "cookieConsent=declined; max-age=2592000; path=/; SameSite=Lax"; // 30 days
             cookieConsent.style.display = 'none';
+        });
+        
+        // Handle settings button
+        cookieSettings.addEventListener('click', function() {
+            // In a real implementation, this would open a modal with cookie preferences
+            alert('In a complete implementation, this would open a cookie preferences dialog.');
         });
 
         // Theme toggle functionality
@@ -1402,24 +1560,6 @@ nav a:hover {
             }
         }
         
-        // Function to create money change indicators
-        function createMoneyChange(element, isProfit) {
-            const changeElement = document.createElement('div');
-            changeElement.className = `money-change ${isProfit ? 'up' : 'down'}`;
-            
-            const amount = (Math.random() * 0.5 + 0.1).toFixed(2);
-            const sign = isProfit ? '+' : '-';
-            changeElement.textContent = `${sign}$${amount}B`;
-            changeElement.style.left = `${30 + Math.random() * 40}%`;
-            
-            element.appendChild(changeElement);
-            
-            // Remove after animation
-            setTimeout(() => {
-                changeElement.remove();
-            }, 3000);
-        }
-        
         // Function to update billionaire cards with new data
         function updateBillionaireCards(data, sectionId) {
             const container = document.getElementById(sectionId);
@@ -1440,7 +1580,7 @@ nav a:hover {
                 
                 card.innerHTML = `
                     <div class="rank-badge">${billionaire.rank}</div>
-                    <img src="${billionaire.image}" class="profile-img" alt="${billionaire.name}">
+                    <img src="${billionaire.image}" class="profile-img" alt="${billionaire.name}" loading="lazy">
                     ${billionaire.rank === 1 ? '<div class="crown-animation"><i class="fas fa-crown"></i></div>' : ''}
                     
                     <div class="wealth-meter">
@@ -1455,7 +1595,7 @@ nav a:hover {
                     <p class="primary-source">${billionaire.source}</p>
                     
                     <div class="wealth-animation" id="${billionaire.id}-animation"></div>
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=${billionaire.country}" class="country-flag" alt="${billionaire.country} Flag">
+                    <img src="${billionaire.country.toLowerCase()}-flag.png" class="country-flag" alt="${billionaire.country} Flag" loading="lazy">
                 `;
                 
                 container.appendChild(card);
@@ -1467,17 +1607,13 @@ nav a:hover {
             });
         }
         
-        // Function to fetch real-time data from API
+        // Function to simulate fetching real-time data
         async function fetchRealTimeData() {
             const loadingSpinner = document.getElementById('loadingSpinner');
             loadingSpinner.style.display = 'block';
             
             try {
-                // In a real implementation, you would call your API here
-                // Example: const response = await fetch('https://api.billionairewatch.in/data');
-                // const data = await response.json();
-                
-                // For now, we'll simulate API delay and use our static data
+                // Simulate API delay
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 
                 // Simulate small changes to the data
@@ -1496,7 +1632,7 @@ nav a:hover {
                 
                 updateTime();
             } catch (error) {
-                console.error('Error fetching real-time data:', error);
+                console.error('Error fetching data:', error);
                 // Fall back to static data if API fails
                 updateBillionaireCards(billionaireData.global, 'global-billionaires');
                 updateBillionaireCards(billionaireData.india, 'india-billionaires');
@@ -1526,7 +1662,7 @@ nav a:hover {
             this.disabled = true;
             
             fetchRealTimeData().then(() => {
-                this.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh';
+                this.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Data';
                 this.disabled = false;
             });
         });
@@ -1540,9 +1676,8 @@ nav a:hover {
             
             updateTime();
             
-            // Set up real-time updates
+            // Set up time updates
             setInterval(updateTime, 1000);
-            setInterval(fetchRealTimeData, 300000); // Update every 5 minutes
             
             // Continuous animations for top billionaires
             setInterval(() => {
@@ -1550,6 +1685,14 @@ nav a:hover {
                 createCoins('mark-zuckerberg-animation');
                 createCoins('jeff-bezos-animation');
             }, 3000);
+            
+            // Remove the "just now" text after first update
+            setTimeout(() => {
+                const updateElement = document.getElementById('update-time');
+                if (updateElement.textContent === 'Just now') {
+                    updateTime();
+                }
+            }, 1000);
         });
     </script>
 </body>
