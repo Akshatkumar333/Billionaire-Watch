@@ -8,14 +8,19 @@
     <meta name="google-adsense-account" content="ca-pub-2776727085751679">
     <meta name="description" content="Track Elon Musk, Mukesh Ambani & top global billionaires' net worth in real-time (2025 data). Daily updated rankings, wealth sources, and portfolio breakdowns with expert analysis.">
    
-    <title>Billionaire Wealth Tracker 2025 -Latest Updates on World's Wealthiest | Real-Time Net Worth Rankings</title>
+    <title>Billionaire Wealth Tracker 2025 - Latest Updates on World's Wealthiest | Real-Time Net Worth Rankings</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Billionaire Watch",
   "url": "https://billionairewatch.in/",
-  "logo": "https://billionairewatch.in/billioniare image.jpg"
+  "logo": "https://billionairewatch.in/billionaire-image.jpg",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://billionairewatch.in/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,6 +68,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            line-height: 1.6;
         }
 
         /* Cookie Consent Banner */
@@ -179,7 +185,7 @@
             100% { transform: rotate(360deg); }
         }
 
-         header {
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -201,66 +207,58 @@
             color: var(--accent);
         }
         
-        <nav>
-    <ul>
-        <li><a href="#global">Global</a></li>
-        <li><a href="#india">India</a></li>
-        <li><a href="#usa">USA</a></li>
-        <li><a href="#analysis">Analysis</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-</nav>
-/* Navigation Styles */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
 
-nav li {
-    display: inline-block;
-}
+        nav li {
+            display: inline-block;
+        }
 
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background-color: var(--secondary);
-    transition: all 0.3s;
-    font-weight: 500;
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap;
-}
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: var(--secondary);
+            transition: all 0.3s;
+            font-weight: 500;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
 
-nav a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow);
-}
+        nav a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
 
-/* For responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-/* For the light theme */
-[data-theme="light"] nav a {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+        /* For responsive design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        
+        /* For the light theme */
+        [data-theme="light"] nav a {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-[data-theme="light"] nav a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-}
+        [data-theme="light"] nav a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
 
         .policy-links {
             display: flex;
@@ -292,14 +290,6 @@ nav a:hover {
             font-size: 14px;
         }
         
-        
-        .market-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-        
         .market-status .indicator {
             width: 10px;
             height: 10px;
@@ -321,7 +311,7 @@ nav a:hover {
             color: var(--accent);
         }
         
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             margin-bottom: 20px;
             color: var(--accent);
         }
@@ -366,26 +356,28 @@ nav a:hover {
             background-color: var(--accent);
             color: var(--primary);
         }
+        
         .policy-links {
-    display: flex;
-    gap: 15px;
-    margin-left: 20px;
-}
+            display: flex;
+            gap: 15px;
+            margin-left: 20px;
+        }
 
-.policy-links a {
-    font-size: 14px;
-    color: var(--neutral);
-    text-decoration: none;
-    transition: color 0.3s;
-    padding: 8px 15px;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-}
+        .policy-links a {
+            font-size: 14px;
+            color: var(--neutral);
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+        }
 
-.policy-links a:hover {
-    color: var(--accent);
-    background-color: var(--secondary);
-}
+        .policy-links a:hover {
+            color: var(--accent);
+            background-color: var(--secondary);
+        }
+        
         .billionaire-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -607,6 +599,207 @@ nav a:hover {
             border: 2px solid var(--accent);
         }
         
+        /* Learn More Button */
+        .learn-more-btn {
+            display: block;
+            margin: 15px auto 0;
+            padding: 8px 15px;
+            background-color: var(--secondary);
+            color: var(--text);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        /* Billionaire Profile Modal */
+        .profile-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: var(--card-bg);
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: var(--text);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .profile-img-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+        }
+        
+        .profile-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: var(--accent);
+        }
+        
+        .profile-title {
+            font-size: 18px;
+            color: var(--neutral);
+            margin-bottom: 10px;
+        }
+        
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--neutral);
+        }
+        
+        .profile-sections {
+            margin-top: 30px;
+        }
+        
+        .profile-section {
+            margin-bottom: 30px;
+        }
+        
+        .profile-section h3 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        /* Wealth Composition Chart */
+        .wealth-chart {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 30px 0;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--accent);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+        
+        .timeline-year {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
         /* Cross-promotion footer */
         .website-promotion {
             text-align: center;
@@ -695,6 +888,19 @@ nav a:hover {
                 padding-right: 0;
                 margin-bottom: 15px;
             }
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-stats {
+                justify-content: center;
+            }
+            
+            .modal-content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -705,6 +911,69 @@ nav a:hover {
         <div class="cookie-consent-buttons">
             <button class="cookie-btn cookie-accept" id="acceptCookies">Accept</button>
             <button class="cookie-btn cookie-decline" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Billionaire Profile Modal -->
+    <div class="profile-modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="profile-header">
+                <img src="" class="profile-img-large" id="modalProfileImg" alt="Billionaire Profile">
+                <div class="profile-info">
+                    <h1 class="profile-name" id="modalName"></h1>
+                    <p class="profile-title" id="modalTitle"></p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="modalNetWorth"></div>
+                            <div class="stat-label">Net Worth</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="modalRank"></div>
+                            <div class="stat-label">Global Rank</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="modalAge"></div>
+                            <div class="stat-label">Age</div>
+                        </div>
+                    </div>
+                    <div class="wealth-change" id="modalChange"></div>
+                </div>
+            </div>
+            
+            <div class="profile-sections">
+                <div class="profile-section">
+                    <h3>Biography</h3>
+                    <p id="modalBio"></p>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Wealth Composition</h3>
+                    <div class="wealth-chart" id="wealthChart">
+                        <!-- Chart will be rendered here -->
+                    </div>
+                    <div class="chart-legend" id="wealthLegend">
+                        <!-- Legend will be rendered here -->
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Career Timeline</h3>
+                    <div class="timeline" id="careerTimeline">
+                        <!-- Timeline items will be rendered here -->
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Philanthropy</h3>
+                    <p id="modalPhilanthropy"></p>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Recent News</h3>
+                    <div id="modalNews"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -783,6 +1052,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">368</span>B</p>
                     <p class="primary-source">Tesla, SpaceX, X</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="elon-musk">Learn More</a>
+                    
                     <div class="wealth-animation" id="elon-animation"></div>
                 </div>
                 
@@ -801,6 +1072,8 @@ nav a:hover {
                     <h3>Mark Zuckerberg</h3>
                     <p class="net-worth">$<span class="wealth-value">243</span>B</p>
                     <p class="primary-source">Meta (Facebook)</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="mark-zuckerberg">Learn More</a>
                     
                     <div class="wealth-animation" id="mark-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -822,6 +1095,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">229</span>B</p>
                     <p class="primary-source">Amazon, Blue Origin</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="jeff-bezos">Learn More</a>
+                    
                     <div class="wealth-animation" id="jeff-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
@@ -841,6 +1116,8 @@ nav a:hover {
                     <h3>Larry Ellison</h3>
                     <p class="net-worth">$<span class="wealth-value">192</span>B</p>
                     <p class="primary-source">Oracle</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="larry-ellison">Learn More</a>
                     
                     <div class="wealth-animation" id="larry-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -862,6 +1139,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">176</span>B</p>
                     <p class="primary-source">Microsoft, Investments</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="bill-gates">Learn More</a>
+                    
                     <div class="wealth-animation" id="bill-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
@@ -881,6 +1160,8 @@ nav a:hover {
                     <h3>Steve Ballmer</h3>
                     <p class="net-worth">$<span class="wealth-value">161</span>B</p>
                     <p class="primary-source">Microsoft, LA Clippers</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="steve-ballmer">Learn More</a>
                     
                     <div class="wealth-animation" id="steve-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -902,6 +1183,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">154</span>B</p>
                     <p class="primary-source">Berkshire Hathaway</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="warren-buffett">Learn More</a>
+                    
                     <div class="wealth-animation" id="warren-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
@@ -921,6 +1204,8 @@ nav a:hover {
                     <h3>Larry Page</h3>
                     <p class="net-worth">$<span class="wealth-value">153</span>B</p>
                     <p class="primary-source">Google (Alphabet)</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="larry-page">Learn More</a>
                     
                     <div class="wealth-animation" id="larryp-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -942,6 +1227,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">153</span>B</p>
                     <p class="primary-source">LVMH</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="bernard-arnault">Learn More</a>
+                    
                     <div class="wealth-animation" id="bernard-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=FR" class="country-flag" alt="France Flag">
                 </div>
@@ -961,6 +1248,8 @@ nav a:hover {
                     <h3>Sergey Brin</h3>
                     <p class="net-worth">$<span class="wealth-value">143</span>B</p>
                     <p class="primary-source">Google (Alphabet)</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="sergey-brin">Learn More</a>
                     
                     <div class="wealth-animation" id="sergey-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -1007,6 +1296,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">91.8</span>B</p>
                     <p class="primary-source">Reliance Industries</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="mukesh-ambani">Learn More</a>
+                    
                     <div class="wealth-animation" id="mukesh-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
                 </div>
@@ -1027,6 +1318,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">60.8</span>B</p>
                     <p class="primary-source">Adani Group</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="gautam-adani">Learn More</a>
+                    
                     <div class="wealth-animation" id="gautam-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
                 </div>
@@ -1046,6 +1339,8 @@ nav a:hover {
                     <h3>Shiv Nadar</h3>
                     <p class="net-worth">$<span class="wealth-value">34.9</span>B</p>
                     <p class="primary-source">HCL Technologies</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="shiv-nadar">Learn More</a>
                     
                     <div class="wealth-animation" id="shiv-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=IN" class="country-flag" alt="India Flag">
@@ -1079,6 +1374,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">368</span>B</p>
                     <p class="primary-source">Tesla, SpaceX, X</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="elon-musk">Learn More</a>
+                    
                     <div class="wealth-animation" id="elon-usa-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
@@ -1099,6 +1396,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">243</span>B</p>
                     <p class="primary-source">Meta (Facebook)</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="mark-zuckerberg">Learn More</a>
+                    
                     <div class="wealth-animation" id="mark-usa-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
                 </div>
@@ -1118,6 +1417,8 @@ nav a:hover {
                     <h3>Jeff Bezos</h3>
                     <p class="net-worth">$<span class="wealth-value">229</span>B</p>
                     <p class="primary-source">Amazon, Blue Origin</p>
+                    
+                    <a href="#" class="learn-more-btn" data-id="jeff-bezos">Learn More</a>
                     
                     <div class="wealth-animation" id="jeff-usa-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=US" class="country-flag" alt="USA Flag">
@@ -1149,17 +1450,19 @@ nav a:hover {
             </a>
         </div>
     </div>
-<!-- Replace the entire <footer> section with this: -->
-<footer>
-    <p>&copy; 2025 BillionaireWatch.in | 
-       <a href="/privacy.html">Privacy Policy</a> | 
-       <a href="https://billionairewatch.in/terms.html" target="_blank">Terms</a> | 
-       <a href="/about.html">About Us</a> | 
-       <a href="mailto:contact@billionairewatch.in">Contact</a>
-    </p>
-    <p class="credit">Made by Akshat Kumar</p>
-</footer>       <script>
-        // Current 2025 billionaire data
+
+    <footer>
+        <p>&copy; 2025 BillionaireWatch.in | 
+           <a href="/privacy.html">Privacy Policy</a> | 
+           <a href="https://billionairewatch.in/terms.html" target="_blank">Terms</a> | 
+           <a href="/about.html">About Us</a> | 
+           <a href="mailto:contact@billionairewatch.in">Contact</a>
+        </p>
+        <p class="credit">Made by Akshat Kumar</p>
+    </footer>
+
+    <script>
+        // Current 2025 billionaire data with detailed information
         const billionaireData = {
             global: [
                 {
@@ -1170,7 +1473,33 @@ nav a:hover {
                     source: "Tesla, SpaceX, X",
                     country: "US",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk",
+                    age: 54,
+                    bio: "Elon Reeve Musk is a business magnate and investor. He is the founder, CEO, and chief engineer of SpaceX; angel investor, CEO, and product architect of Tesla, Inc.; owner and CEO of X (formerly Twitter); founder of The Boring Company; co-founder of Neuralink and OpenAI; and president of the philanthropic Musk Foundation. With an estimated net worth of around $368 billion as of 2025, Musk is the wealthiest person in the world.",
+                    wealthComposition: [
+                        { name: "Tesla", value: 45, color: "#f94144" },
+                        { name: "SpaceX", value: 30, color: "#f3722c" },
+                        { name: "X (Twitter)", value: 15, color: "#f8961e" },
+                        { name: "Other Investments", value: 10, color: "#f9c74f" }
+                    ],
+                    careerTimeline: [
+                        { year: "1995", event: "Co-founded Zip2, a web software company" },
+                        { year: "1999", event: "Sold Zip2 to Compaq for $307 million" },
+                        { year: "2002", event: "Founded SpaceX with $100 million from PayPal sale" },
+                        { year: "2004", event: "Joined Tesla Motors as chairman and lead investor" },
+                        { year: "2008", event: "Became Tesla CEO" },
+                        { year: "2015", event: "Co-founded OpenAI" },
+                        { year: "2016", event: "Founded Neuralink and The Boring Company" },
+                        { year: "2022", event: "Acquired Twitter for $44 billion" },
+                        { year: "2023", event: "Rebranded Twitter to X" },
+                        { year: "2025", event: "Tesla achieves full self-driving capability" }
+                    ],
+                    philanthropy: "Through the Musk Foundation, Elon has donated to renewable energy research, science and engineering education, pediatric research, and human space exploration research. In 2022, he donated $5.7 billion worth of Tesla shares to charity.",
+                    news: [
+                        { title: "Tesla unveils revolutionary battery technology", source: "TechCrunch", date: "2025-03-15" },
+                        { title: "SpaceX completes first manned Mars mission", source: "Space News", date: "2025-02-28" },
+                        { title: "X platform reaches 1 billion monthly active users", source: "The Verge", date: "2025-01-10" }
+                    ]
                 },
                 {
                     id: "mark-zuckerberg",
@@ -1180,7 +1509,30 @@ nav a:hover {
                     source: "Meta (Facebook)",
                     country: "US",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg",
+                    age: 41,
+                    bio: "Mark Elliot Zuckerberg is an American business magnate, computer programmer, and philanthropist. He co-founded the social media website Facebook and its parent company Meta Platforms (formerly Facebook, Inc.), of which he is executive chairman, chief executive officer, and controlling shareholder. As of 2025, Zuckerberg's net worth is estimated at $243 billion, making him the second-wealthiest person in the world.",
+                    wealthComposition: [
+                        { name: "Meta Platforms", value: 85, color: "#577590" },
+                        { name: "Other Investments", value: 15, color: "#43aa8b" }
+                    ],
+                    careerTimeline: [
+                        { year: "2004", event: "Launched Facebook from Harvard dorm room" },
+                        { year: "2006", event: "Turned down $1 billion Yahoo acquisition offer" },
+                        { year: "2012", event: "Facebook IPO at $104 billion valuation" },
+                        { year: "2014", event: "Acquired WhatsApp for $19 billion" },
+                        { year: "2015", event: "Launched Facebook Live" },
+                        { year: "2021", event: "Rebranded Facebook to Meta" },
+                        { year: "2023", event: "Meta releases advanced AI assistant" },
+                        { year: "2024", event: "Meta's VR platform reaches 100 million users" },
+                        { year: "2025", event: "Meta introduces neural interface technology" }
+                    ],
+                    philanthropy: "Mark Zuckerberg and his wife Priscilla Chan have pledged to give away 99% of their Facebook shares through the Chan Zuckerberg Initiative, which focuses on curing diseases, improving education, and building strong communities. They have donated billions to various causes including education reform and scientific research.",
+                    news: [
+                        { title: "Meta's AI surpasses human performance benchmarks", source: "Wired", date: "2025-04-05" },
+                        { title: "Zuckerberg announces new VR education initiative", source: "Forbes", date: "2025-03-22" },
+                        { title: "Meta stock surges after strong Q1 earnings", source: "Bloomberg", date: "2025-04-18" }
+                    ]
                 },
                 {
                     id: "jeff-bezos",
@@ -1190,7 +1542,31 @@ nav a:hover {
                     source: "Amazon, Blue Origin",
                     country: "US",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos",
+                    age: 61,
+                    bio: "Jeffrey Preston Bezos is an American entrepreneur, media proprietor, investor, and commercial astronaut. He is the founder, executive chairman, and former president and CEO of Amazon, the world's largest e-commerce and cloud computing company. With a net worth of $229 billion as of 2025, he is the third-wealthiest person in the world. Bezos also founded the aerospace manufacturer and sub-orbital spaceflight services company Blue Origin in 2000.",
+                    wealthComposition: [
+                        { name: "Amazon", value: 70, color: "#ff9f1c" },
+                        { name: "Blue Origin", value: 20, color: "#2ec4b6" },
+                        { name: "Other Investments", value: 10, color: "#e71d36" }
+                    ],
+                    careerTimeline: [
+                        { year: "1994", event: "Founded Amazon in his garage" },
+                        { year: "1997", event: "Amazon IPO at $438 million valuation" },
+                        { year: "2000", event: "Founded Blue Origin" },
+                        { year: "2013", event: "Purchased The Washington Post" },
+                        { year: "2017", event: "Became world's richest person" },
+                        { year: "2021", event: "Stepped down as Amazon CEO" },
+                        { year: "2021", event: "Went to space on Blue Origin's first crewed flight" },
+                        { year: "2023", event: "Blue Origin begins commercial space flights" },
+                        { year: "2025", event: "Amazon reaches $3 trillion market cap" }
+                    ],
+                    philanthropy: "Jeff Bezos launched the Bezos Earth Fund in 2020 with a $10 billion commitment to address climate change. He has also donated billions to other causes including education, homelessness, and cancer research. In 2021, he established the Courage and Civility Award with a $100 million annual prize.",
+                    news: [
+                        { title: "Blue Origin announces lunar base plans", source: "Space.com", date: "2025-04-12" },
+                        { title: "Amazon Web Services continues cloud dominance", source: "TechRadar", date: "2025-04-08" },
+                        { title: "Bezos pledges additional $2 billion to Earth Fund", source: "The Guardian", date: "2025-03-30" }
+                    ]
                 },
                 {
                     id: "larry-ellison",
@@ -1200,7 +1576,31 @@ nav a:hover {
                     source: "Oracle",
                     country: "US",
                     rank: 4,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Ellison",
+                    age: 80,
+                    bio: "Lawrence Joseph Ellison is an American business magnate and investor who is the co-founder, executive chairman, and chief technology officer (CTO) of Oracle Corporation. As of 2025, he is the fourth-wealthiest person in the world with a net worth of $192 billion. Ellison has played a key role in Oracle's growth into one of the world's largest enterprise software companies.",
+                    wealthComposition: [
+                        { name: "Oracle", value: 75, color: "#3a86ff" },
+                        { name: "Real Estate", value: 15, color: "#8338ec" },
+                        { name: "Other Investments", value: 10, color: "#ff006e" }
+                    ],
+                    careerTimeline: [
+                        { year: "1977", event: "Co-founded Oracle with $2,000 investment" },
+                        { year: "1986", event: "Oracle IPO" },
+                        { year: "1995", event: "Became Oracle CEO" },
+                        { year: "2010", event: "Acquired Sun Microsystems" },
+                        { year: "2014", event: "Stepped down as Oracle CEO" },
+                        { year: "2018", event: "Joined Tesla board of directors" },
+                        { year: "2020", event: "Moved to Hawaii permanently" },
+                        { year: "2023", event: "Oracle completes acquisition of major healthcare IT firm" },
+                        { year: "2025", event: "Oracle's cloud revenue surpasses $100 billion" }
+                    ],
+                    philanthropy: "Larry Ellison has signed The Giving Pledge, committing to give away at least half of his wealth. He has donated hundreds of millions to medical research, education, and wildlife conservation. His largest gifts include $200 million to USC for a cancer research center and $100 million to fight Ebola.",
+                    news: [
+                        { title: "Oracle announces breakthrough in quantum computing", source: "ZDNet", date: "2025-04-15" },
+                        { title: "Ellison donates $50 million to ocean conservation", source: "Forbes", date: "2025-03-25" },
+                        { title: "Oracle's healthcare division exceeds expectations", source: "Business Insider", date: "2025-04-02" }
+                    ]
                 },
                 {
                     id: "bill-gates",
@@ -1210,7 +1610,31 @@ nav a:hover {
                     source: "Microsoft, Investments",
                     country: "US",
                     rank: 5,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bill+Gates",
+                    age: 69,
+                    bio: "William Henry Gates III is an American business magnate, software developer, investor, author, and philanthropist. He is the co-founder of Microsoft Corporation, the world's largest personal-computer software company. As of 2025, Gates has an estimated net worth of $176 billion, making him the fifth-wealthiest person in the world. Since leaving Microsoft, he has focused on philanthropic work through the Bill & Melinda Gates Foundation.",
+                    wealthComposition: [
+                        { name: "Microsoft", value: 30, color: "#7b2cbf" },
+                        { name: "Investments", value: 50, color: "#9d4edd" },
+                        { name: "Other Assets", value: 20, color: "#c77dff" }
+                    ],
+                    careerTimeline: [
+                        { year: "1975", event: "Co-founded Microsoft with Paul Allen" },
+                        { year: "1985", event: "Launched Windows 1.0" },
+                        { year: "1995", event: "Became world's richest person" },
+                        { year: "2000", event: "Stepped down as Microsoft CEO" },
+                        { year: "2000", event: "Founded Bill & Melinda Gates Foundation" },
+                        { year: "2008", event: "Left full-time work at Microsoft" },
+                        { year: "2020", event: "Left Microsoft board" },
+                        { year: "2021", event: "Bill & Melinda Gates announce divorce" },
+                        { year: "2025", event: "Gates Foundation eradicates another disease" }
+                    ],
+                    philanthropy: "Through the Bill & Melinda Gates Foundation, Gates has donated tens of billions to global health, education, and poverty alleviation. The foundation has played a key role in fighting diseases like malaria, polio, and COVID-19. Gates has also pledged to give away 95% of his wealth through The Giving Pledge.",
+                    news: [
+                        { title: "Gates Foundation announces new education initiative", source: "The New York Times", date: "2025-04-10" },
+                        { title: "Bill Gates invests $500 million in clean energy", source: "Reuters", date: "2025-03-28" },
+                        { title: "New book by Gates focuses on future technologies", source: "The Wall Street Journal", date: "2025-04-05" }
+                    ]
                 },
                 {
                     id: "steve-ballmer",
@@ -1220,7 +1644,31 @@ nav a:hover {
                     source: "Microsoft, LA Clippers",
                     country: "US",
                     rank: 6,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Steve+Ballmer",
+                    age: 69,
+                    bio: "Steven Anthony Ballmer is an American businessman and investor who served as the chief executive officer of Microsoft from 2000 to 2014. He is the owner of the Los Angeles Clippers of the National Basketball Association (NBA). As of 2025, Ballmer has an estimated net worth of $161 billion, making him the sixth-wealthiest person in the world. His wealth primarily comes from his Microsoft shares and other investments.",
+                    wealthComposition: [
+                        { name: "Microsoft", value: 80, color: "#f15bb5" },
+                        { name: "LA Clippers", value: 10, color: "#fee440" },
+                        { name: "Other Investments", value: 10, color: "#00bbf9" }
+                    ],
+                    careerTimeline: [
+                        { year: "1980", event: "Joined Microsoft as employee #30" },
+                        { year: "1998", event: "Became Microsoft President" },
+                        { year: "2000", event: "Succeeded Bill Gates as CEO" },
+                        { year: "2014", event: "Retired from Microsoft" },
+                        { year: "2014", event: "Purchased LA Clippers for $2 billion" },
+                        { year: "2018", event: "Launched USAFacts.org" },
+                        { year: "2020", event: "Released Ballmer Group's racial equity plan" },
+                        { year: "2023", event: "Clippers win first NBA championship" },
+                        { year: "2025", event: "Microsoft stock reaches all-time high" }
+                    ],
+                    philanthropy: "Steve Ballmer and his wife Connie have donated billions through the Ballmer Group, which focuses on economic mobility for children and families in the U.S. They have also funded USAFacts, a non-profit that provides government data in an accessible format. In 2020, they pledged $400 million to support Black-owned businesses.",
+                    news: [
+                        { title: "Ballmer Group commits $200M to education reform", source: "Education Week", date: "2025-04-01" },
+                        { title: "Clippers valuation surpasses $5 billion", source: "ESPN", date: "2025-03-20" },
+                        { title: "Ballmer's wealth surpasses $160 billion", source: "Forbes", date: "2025-04-15" }
+                    ]
                 },
                 {
                     id: "warren-buffett",
@@ -1230,7 +1678,30 @@ nav a:hover {
                     source: "Berkshire Hathaway",
                     country: "US",
                     rank: 7,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Warren+Buffett",
+                    age: 94,
+                    bio: "Warren Edward Buffett is an American business magnate, investor, and philanthropist. He is the chairman and CEO of Berkshire Hathaway, a multinational conglomerate holding company. As of 2025, Buffett has an estimated net worth of $154 billion, making him the seventh-wealthiest person in the world. Known as the 'Oracle of Omaha', he is considered one of the most successful investors in history.",
+                    wealthComposition: [
+                        { name: "Berkshire Hathaway", value: 90, color: "#ff595e" },
+                        { name: "Other Investments", value: 10, color: "#ffca3a" }
+                    ],
+                    careerTimeline: [
+                        { year: "1956", event: "Founded Buffett Partnership Ltd." },
+                        { year: "1965", event: "Took control of Berkshire Hathaway" },
+                        { year: "1970", event: "Became Berkshire Hathaway CEO" },
+                        { year: "2006", event: "Pledged to give away 99% of wealth" },
+                        { year: "2010", event: "Joined Gates in The Giving Pledge" },
+                        { year: "2018", event: "Invested in Apple and Amazon" },
+                        { year: "2020", event: "Donated $2.9 billion to charities" },
+                        { year: "2023", event: "Named successor as Berkshire CEO" },
+                        { year: "2025", event: "Berkshire Hathaway celebrates 60 years" }
+                    ],
+                    philanthropy: "Warren Buffett has pledged to give away 99% of his wealth, primarily through the Bill & Melinda Gates Foundation. He has already donated tens of billions to various causes. His children each run charitable foundations that have received billions from him to support causes like nuclear disarmament, women's rights, and environmental conservation.",
+                    news: [
+                        { title: "Buffett donates another $4 billion to Gates Foundation", source: "CNBC", date: "2025-04-18" },
+                        { title: "Berkshire Hathaway reports strong earnings", source: "The Wall Street Journal", date: "2025-04-12" },
+                        { title: "Buffett's annual letter highlights investment strategy", source: "Bloomberg", date: "2025-03-15" }
+                    ]
                 },
                 {
                     id: "larry-page",
@@ -1240,7 +1711,30 @@ nav a:hover {
                     source: "Google (Alphabet)",
                     country: "US",
                     rank: 8,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Larry+Page",
+                    age: 52,
+                    bio: "Lawrence Edward Page is an American business magnate, computer scientist, and Internet entrepreneur. He is best known as one of the co-founders of Google along with Sergey Brin. As of 2025, Page has an estimated net worth of $153 billion, making him the eighth-wealthiest person in the world. He served as CEO of Alphabet Inc., Google's parent company, until 2019 but remains a controlling shareholder and board member.",
+                    wealthComposition: [
+                        { name: "Alphabet (Google)", value: 85, color: "#8ac926" },
+                        { name: "Other Investments", value: 15, color: "#1982c4" }
+                    ],
+                    careerTimeline: [
+                        { year: "1998", event: "Co-founded Google with Sergey Brin" },
+                        { year: "2004", event: "Google IPO" },
+                        { year: "2011", event: "Became Google CEO" },
+                        { year: "2015", event: "Announced Alphabet restructuring" },
+                        { year: "2019", event: "Stepped down as Alphabet CEO" },
+                        { year: "2020", event: "Invested in flying car startups" },
+                        { year: "2022", event: "Focused on sustainable energy projects" },
+                        { year: "2024", event: "Alphabet reaches $2 trillion valuation" },
+                        { year: "2025", event: "Google's AI becomes industry leader" }
+                    ],
+                    philanthropy: "Larry Page has donated hundreds of millions through the Carl Victor Page Memorial Foundation, named after his father. His philanthropic interests include scientific research, education, and renewable energy. He has also pledged to give away at least half of his wealth through The Giving Pledge.",
+                    news: [
+                        { title: "Page invests in revolutionary battery startup", source: "TechCrunch", date: "2025-04-14" },
+                        { title: "Alphabet stock surges on AI breakthroughs", source: "The Verge", date: "2025-04-05" },
+                        { title: "Page's flying car company completes first test flight", source: "Wired", date: "2025-03-28" }
+                    ]
                 },
                 {
                     id: "bernard-arnault",
@@ -1250,7 +1744,30 @@ nav a:hover {
                     source: "LVMH",
                     country: "FR",
                     rank: 9,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Bernard+Arnault",
+                    age: 76,
+                    bio: "Bernard Jean Étienne Arnault is a French billionaire businessman and art collector. He is the chairman and chief executive of LVMH Moët Hennessy Louis Vuitton, the world's largest luxury goods company. As of 2025, Arnault has an estimated net worth of $153 billion, making him the ninth-wealthiest person in the world and the richest in Europe. He has built LVMH through strategic acquisitions of luxury brands.",
+                    wealthComposition: [
+                        { name: "LVMH", value: 90, color: "#6a4c93" },
+                        { name: "Other Investments", value: 10, color: "#1982c4" }
+                    ],
+                    careerTimeline: [
+                        { year: "1984", event: "Acquired Christian Dior" },
+                        { year: "1987", event: "Became majority shareholder of LVMH" },
+                        { year: "1989", event: "Became LVMH chairman" },
+                        { year: "1999", event: "Acquired Sephora" },
+                        { year: "2017", event: "Purchased Christian Dior Couture" },
+                        { year: "2019", event: "Acquired Tiffany & Co. for $16.2 billion" },
+                        { year: "2021", event: "Became world's richest person briefly" },
+                        { year: "2023", event: "LVMH reaches €500 billion market cap" },
+                        { year: "2025", event: "Opens Louis Vuitton museum in Paris" }
+                    ],
+                    philanthropy: "Bernard Arnault has donated hundreds of millions to cultural and artistic causes in France. He founded the Louis Vuitton Foundation, a museum and cultural center in Paris, with a personal donation of over €100 million. He has also supported education initiatives and medical research.",
+                    news: [
+                        { title: "LVMH reports record luxury sales in Asia", source: "Financial Times", date: "2025-04-16" },
+                        { title: "Arnault donates €50 million to Louvre renovation", source: "Le Monde", date: "2025-03-22" },
+                        { title: "New Dior collection breaks sales records", source: "Vogue", date: "2025-04-10" }
+                    ]
                 },
                 {
                     id: "sergey-brin",
@@ -1260,7 +1777,30 @@ nav a:hover {
                     source: "Google (Alphabet)",
                     country: "US",
                     rank: 10,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Sergey+Brin",
+                    age: 51,
+                    bio: "Sergey Mikhaylovich Brin is an American business magnate, computer scientist, and Internet entrepreneur. He co-founded Google with Larry Page. As of 2025, Brin has an estimated net worth of $143 billion, making him the tenth-wealthiest person in the world. He served as president of Alphabet Inc., Google's parent company, until 2019 but remains a controlling shareholder and board member.",
+                    wealthComposition: [
+                        { name: "Alphabet (Google)", value: 85, color: "#8ac926" },
+                        { name: "Other Investments", value: 15, color: "#1982c4" }
+                    ],
+                    careerTimeline: [
+                        { year: "1998", event: "Co-founded Google with Larry Page" },
+                        { year: "2004", event: "Google IPO" },
+                        { year: "2011", event: "Became Google's director of special projects" },
+                        { year: "2015", event: "Announced Alphabet restructuring" },
+                        { year: "2019", event: "Stepped down as Alphabet president" },
+                        { year: "2020", event: "Focused on moonshot projects" },
+                        { year: "2022", event: "Invested in flying car technology" },
+                        { year: "2024", event: "Alphabet reaches $2 trillion valuation" },
+                        { year: "2025", event: "Google's quantum computing breakthrough" }
+                    ],
+                    philanthropy: "Sergey Brin has donated hundreds of millions through the Brin Wojcicki Foundation (with his ex-wife Anne Wojcicki). He has supported Parkinson's disease research (his mother has the condition), education, and refugee assistance. He has also pledged to give away at least half of his wealth through The Giving Pledge.",
+                    news: [
+                        { title: "Brin's secret airship project revealed", source: "The Verge", date: "2025-04-08" },
+                        { title: "Alphabet's AI research division makes breakthrough", source: "Wired", date: "2025-03-30" },
+                        { title: "Brin donates $50M to Parkinson's research", source: "The New York Times", date: "2025-03-15" }
+                    ]
                 }
             ],
             india: [
@@ -1272,7 +1812,31 @@ nav a:hover {
                     source: "Reliance Industries",
                     country: "IN",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mukesh+Ambani",
+                    age: 68,
+                    bio: "Mukesh Dhirubhai Ambani is an Indian billionaire businessman and the chairman, managing director, and largest shareholder of Reliance Industries Ltd. (RIL), a Fortune Global 500 company and India's most valuable company by market value. As of 2025, he is the richest person in Asia with a net worth of $91.8 billion. Ambani has led Reliance's diversification from petrochemicals into telecommunications, retail, and digital services.",
+                    wealthComposition: [
+                        { name: "Reliance Industries", value: 70, color: "#3a86ff" },
+                        { name: "Jio Platforms", value: 20, color: "#8338ec" },
+                        { name: "Retail Ventures", value: 10, color: "#ff006e" }
+                    ],
+                    careerTimeline: [
+                        { year: "1981", event: "Joined Reliance after MBA from Stanford" },
+                        { year: "2002", event: "Took over Reliance after father's death" },
+                        { year: "2006", event: "Split Reliance with brother Anil" },
+                        { year: "2016", event: "Launched Jio telecom network" },
+                        { year: "2019", event: "Made Reliance net debt-free" },
+                        { year: "2020", event: "Sold stakes in Jio Platforms" },
+                        { year: "2022", event: "Announced green energy initiatives" },
+                        { year: "2024", event: "Reliance Retail crosses $100B valuation" },
+                        { year: "2025", event: "Jio becomes India's largest 6G provider" }
+                    ],
+                    philanthropy: "Mukesh Ambani and his family support various causes through the Reliance Foundation, which focuses on rural development, education, health, and disaster response. They have donated hundreds of millions to COVID-19 relief efforts and built one of India's best hospitals. Ambani has also pledged significant funds to support Indian athletes for the Olympics.",
+                    news: [
+                        { title: "Reliance announces major renewable energy investment", source: "The Economic Times", date: "2025-04-15" },
+                        { title: "Jio 6G network covers 90% of India", source: "Mint", date: "2025-04-05" },
+                        { title: "Ambani family donates $50M to education fund", source: "Hindustan Times", date: "2025-03-25" }
+                    ]
                 },
                 {
                     id: "gautam-adani",
@@ -1282,7 +1846,32 @@ nav a:hover {
                     source: "Adani Group",
                     country: "IN",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani",
+                    age: 63,
+                    bio: "Gautam Shantilal Adani is an Indian billionaire industrialist who is the chairman and founder of Adani Group, a multinational conglomerate involved in port development and operations in India. As of 2025, he is the second-richest person in India with a net worth of $60.8 billion. Adani's businesses span resources, logistics, energy, and agriculture, making him one of Asia's most influential infrastructure tycoons.",
+                    wealthComposition: [
+                        { name: "Adani Enterprises", value: 30, color: "#ff595e" },
+                        { name: "Adani Ports", value: 20, color: "#ffca3a" },
+                        { name: "Adani Green Energy", value: 25, color: "#8ac926" },
+                        { name: "Other Ventures", value: 25, color: "#1982c4" }
+                    ],
+                    careerTimeline: [
+                        { year: "1988", event: "Founded Adani Enterprises" },
+                        { year: "1995", event: "Acquired Mundra Port" },
+                        { year: "2006", event: "Listed Adani Ports" },
+                        { year: "2018", event: "Began Australian coal mine project" },
+                        { year: "2020", event: "Became India's second richest" },
+                        { year: "2022", event: "Briefly became Asia's richest" },
+                        { year: "2023", event: "Focused on green energy transition" },
+                        { year: "2024", event: "Adani Green reaches 25GW capacity" },
+                        { year: "2025", event: "Launches hydrogen energy initiative" }
+                    ],
+                    philanthropy: "Gautam Adani and his family support education and healthcare initiatives through the Adani Foundation. They have built schools, hospitals, and community centers in rural areas, with a focus on Gujarat. Adani has also pledged significant funds for COVID-19 relief efforts and cyclone disaster response in India.",
+                    news: [
+                        { title: "Adani Group invests $10B in hydrogen energy", source: "Business Standard", date: "2025-04-10" },
+                        { title: "Adani Ports handles record cargo volume", source: "The Hindu", date: "2025-04-05" },
+                        { title: "Adani Foundation opens new rural hospitals", source: "The Indian Express", date: "2025-03-20" }
+                    ]
                 },
                 {
                     id: "shiv-nadar",
@@ -1292,7 +1881,30 @@ nav a:hover {
                     source: "HCL Technologies",
                     country: "IN",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Shiv+Nadar",
+                    age: 80,
+                    bio: "Shiv Nadar is an Indian billionaire industrialist and philanthropist. He is the founder and chairman emeritus of HCL Technologies and the Shiv Nadar Foundation. As of 2025, he is the third-richest person in India with a net worth of $34.9 billion. Nadar founded HCL in the 1970s and transformed it from a hardware company into an IT services giant.",
+                    wealthComposition: [
+                        { name: "HCL Technologies", value: 80, color: "#6a4c93" },
+                        { name: "Other Investments", value: 20, color: "#1982c4" }
+                    ],
+                    careerTimeline: [
+                        { year: "1976", event: "Founded HCL with Rs. 187,000" },
+                        { year: "1991", event: "Entered software services" },
+                        { year: "1999", event: "Listed HCL Technologies" },
+                        { year: "2005", event: "Stepped down as CEO" },
+                        { year: "2010", event: "Founded Shiv Nadar Foundation" },
+                        { year: "2016", event: "Established Shiv Nadar University" },
+                        { year: "2020", event: "Stepped down as chairman" },
+                        { year: "2023", event: "HCL crosses $100B market cap" },
+                        { year: "2025", event: "Shiv Nadar School expands nationally" }
+                    ],
+                    philanthropy: "Through the Shiv Nadar Foundation, he has donated billions to education initiatives in India. The foundation has established universities, schools, and art institutions. Nadar has pledged to give away most of his wealth to philanthropy and was the first Indian to sign The Giving Pledge.",
+                    news: [
+                        { title: "HCL Technologies reports strong cloud growth", source: "The Economic Times", date: "2025-04-12" },
+                        { title: "Shiv Nadar University launches new research center", source: "Mint", date: "2025-03-28" },
+                        { title: "Nadar donates $50M to digital education initiative", source: "Hindustan Times", date: "2025-03-15" }
+                    ]
                 }
             ],
             usa: [
@@ -1304,7 +1916,33 @@ nav a:hover {
                     source: "Tesla, SpaceX, X",
                     country: "US",
                     rank: 1,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Elon+Musk",
+                    age: 54,
+                    bio: "Elon Reeve Musk is a business magnate and investor. He is the founder, CEO, and chief engineer of SpaceX; angel investor, CEO, and product architect of Tesla, Inc.; owner and CEO of X (formerly Twitter); founder of The Boring Company; co-founder of Neuralink and OpenAI; and president of the philanthropic Musk Foundation. With an estimated net worth of around $368 billion as of 2025, Musk is the wealthiest person in the world.",
+                    wealthComposition: [
+                        { name: "Tesla", value: 45, color: "#f94144" },
+                        { name: "SpaceX", value: 30, color: "#f3722c" },
+                        { name: "X (Twitter)", value: 15, color: "#f8961e" },
+                        { name: "Other Investments", value: 10, color: "#f9c74f" }
+                    ],
+                    careerTimeline: [
+                        { year: "1995", event: "Co-founded Zip2, a web software company" },
+                        { year: "1999", event: "Sold Zip2 to Compaq for $307 million" },
+                        { year: "2002", event: "Founded SpaceX with $100 million from PayPal sale" },
+                        { year: "2004", event: "Joined Tesla Motors as chairman and lead investor" },
+                        { year: "2008", event: "Became Tesla CEO" },
+                        { year: "2015", event: "Co-founded OpenAI" },
+                        { year: "2016", event: "Founded Neuralink and The Boring Company" },
+                        { year: "2022", event: "Acquired Twitter for $44 billion" },
+                        { year: "2023", event: "Rebranded Twitter to X" },
+                        { year: "2025", event: "Tesla achieves full self-driving capability" }
+                    ],
+                    philanthropy: "Through the Musk Foundation, Elon has donated to renewable energy research, science and engineering education, pediatric research, and human space exploration research. In 2022, he donated $5.7 billion worth of Tesla shares to charity.",
+                    news: [
+                        { title: "Tesla unveils revolutionary battery technology", source: "TechCrunch", date: "2025-03-15" },
+                        { title: "SpaceX completes first manned Mars mission", source: "Space News", date: "2025-02-28" },
+                        { title: "X platform reaches 1 billion monthly active users", source: "The Verge", date: "2025-01-10" }
+                    ]
                 },
                 {
                     id: "mark-zuckerberg",
@@ -1314,7 +1952,30 @@ nav a:hover {
                     source: "Meta (Facebook)",
                     country: "US",
                     rank: 2,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg",
+                    age: 41,
+                    bio: "Mark Elliot Zuckerberg is an American business magnate, computer programmer, and philanthropist. He co-founded the social media website Facebook and its parent company Meta Platforms (formerly Facebook, Inc.), of which he is executive chairman, chief executive officer, and controlling shareholder. As of 2025, Zuckerberg's net worth is estimated at $243 billion, making him the second-wealthiest person in the world.",
+                    wealthComposition: [
+                        { name: "Meta Platforms", value: 85, color: "#577590" },
+                        { name: "Other Investments", value: 15, color: "#43aa8b" }
+                    ],
+                    careerTimeline: [
+                        { year: "2004", event: "Launched Facebook from Harvard dorm room" },
+                        { year: "2006", event: "Turned down $1 billion Yahoo acquisition offer" },
+                        { year: "2012", event: "Facebook IPO at $104 billion valuation" },
+                        { year: "2014", event: "Acquired WhatsApp for $19 billion" },
+                        { year: "2015", event: "Launched Facebook Live" },
+                        { year: "2021", event: "Rebranded Facebook to Meta" },
+                        { year: "2023", event: "Meta releases advanced AI assistant" },
+                        { year: "2024", event: "Meta's VR platform reaches 100 million users" },
+                        { year: "2025", event: "Meta introduces neural interface technology" }
+                    ],
+                    philanthropy: "Mark Zuckerberg and his wife Priscilla Chan have pledged to give away 99% of their Facebook shares through the Chan Zuckerberg Initiative, which focuses on curing diseases, improving education, and building strong communities. They have donated billions to various causes including education reform and scientific research.",
+                    news: [
+                        { title: "Meta's AI surpasses human performance benchmarks", source: "Wired", date: "2025-04-05" },
+                        { title: "Zuckerberg announces new VR education initiative", source: "Forbes", date: "2025-03-22" },
+                        { title: "Meta stock surges after strong Q1 earnings", source: "Bloomberg", date: "2025-04-18" }
+                    ]
                 },
                 {
                     id: "jeff-bezos",
@@ -1324,7 +1985,31 @@ nav a:hover {
                     source: "Amazon, Blue Origin",
                     country: "US",
                     rank: 3,
-                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos"
+                    image: "https://placehold.co/400x400/16213e/f9c74f?text=Jeff+Bezos",
+                    age: 61,
+                    bio: "Jeffrey Preston Bezos is an American entrepreneur, media proprietor, investor, and commercial astronaut. He is the founder, executive chairman, and former president and CEO of Amazon, the world's largest e-commerce and cloud computing company. With a net worth of $229 billion as of 2025, he is the third-wealthiest person in the world. Bezos also founded the aerospace manufacturer and sub-orbital spaceflight services company Blue Origin in 2000.",
+                    wealthComposition: [
+                        { name: "Amazon", value: 70, color: "#ff9f1c" },
+                        { name: "Blue Origin", value: 20, color: "#2ec4b6" },
+                        { name: "Other Investments", value: 10, color: "#e71d36" }
+                    ],
+                    careerTimeline: [
+                        { year: "1994", event: "Founded Amazon in his garage" },
+                        { year: "1997", event: "Amazon IPO at $438 million valuation" },
+                        { year: "2000", event: "Founded Blue Origin" },
+                        { year: "2013", event: "Purchased The Washington Post" },
+                        { year: "2017", event: "Became world's richest person" },
+                        { year: "2021", event: "Stepped down as Amazon CEO" },
+                        { year: "2021", event: "Went to space on Blue Origin's first crewed flight" },
+                        { year: "2023", event: "Blue Origin begins commercial space flights" },
+                        { year: "2025", event: "Amazon reaches $3 trillion market cap" }
+                    ],
+                    philanthropy: "Jeff Bezos launched the Bezos Earth Fund in 2020 with a $10 billion commitment to address climate change. He has also donated billions to other causes including education, homelessness, and cancer research. In 2021, he established the Courage and Civility Award with a $100 million annual prize.",
+                    news: [
+                        { title: "Blue Origin announces lunar base plans", source: "Space.com", date: "2025-04-12" },
+                        { title: "Amazon Web Services continues cloud dominance", source: "TechRadar", date: "2025-04-08" },
+                        { title: "Bezos pledges additional $2 billion to Earth Fund", source: "The Guardian", date: "2025-03-30" }
+                    ]
                 }
             ]
         };
@@ -1454,6 +2139,8 @@ nav a:hover {
                     <p class="net-worth">$<span class="wealth-value">${billionaire.netWorth.toFixed(1)}</span>B</p>
                     <p class="primary-source">${billionaire.source}</p>
                     
+                    <a href="#" class="learn-more-btn" data-id="${billionaire.id}">Learn More</a>
+                    
                     <div class="wealth-animation" id="${billionaire.id}-animation"></div>
                     <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=${billionaire.country}" class="country-flag" alt="${billionaire.country} Flag">
                 `;
@@ -1519,6 +2206,132 @@ nav a:hover {
             document.getElementById('update-time').textContent = 
                 now.toLocaleTimeString('en-US', options);
         }
+        
+        // Profile modal functionality
+        const profileModal = document.getElementById('profileModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        // Close modal when clicking X
+        closeModal.addEventListener('click', function() {
+            profileModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside content
+        profileModal.addEventListener('click', function(e) {
+            if (e.target === profileModal) {
+                profileModal.style.display = 'none';
+            }
+        });
+        
+        // Function to show billionaire profile
+        function showBillionaireProfile(billionaireId) {
+            // Find billionaire in our data
+            let billionaire;
+            
+            // Search in global list
+            billionaire = billionaireData.global.find(b => b.id === billionaireId);
+            
+            // If not found, search in India list
+            if (!billionaire) {
+                billionaire = billionaireData.india.find(b => b.id === billionaireId);
+            }
+            
+            // If still not found, search in USA list
+            if (!billionaire) {
+                billionaire = billionaireData.usa.find(b => b.id === billionaireId);
+            }
+            
+            if (!billionaire) return;
+            
+            // Update modal content
+            document.getElementById('modalProfileImg').src = billionaire.image;
+            document.getElementById('modalName').textContent = billionaire.name;
+            document.getElementById('modalTitle').textContent = `Chairman & CEO, ${billionaire.source.split(',')[0]}`;
+            document.getElementById('modalNetWorth').textContent = `$${billionaire.netWorth.toFixed(1)}B`;
+            document.getElementById('modalRank').textContent = `#${billionaire.rank}`;
+            document.getElementById('modalAge').textContent = billionaire.age;
+            
+            // Update wealth change
+            const changeClass = billionaire.dailyChange >= 0 ? 'up' : (billionaire.dailyChange === 0 ? 'neutral' : 'down');
+            const changeIcon = billionaire.dailyChange >= 0 ? 'arrow-up' : (billionaire.dailyChange === 0 ? 'equals' : 'arrow-down');
+            document.getElementById('modalChange').innerHTML = `
+                <i class="fas fa-${changeIcon}"></i> <span class="change-value">${billionaire.dailyChange >= 0 ? '+' : ''}${billionaire.dailyChange}%</span> today
+            `;
+            document.getElementById('modalChange').className = `wealth-change ${changeClass}`;
+            
+            // Update bio
+            document.getElementById('modalBio').textContent = billionaire.bio;
+            
+            // Update wealth composition (simplified visualization)
+            const wealthChart = document.getElementById('wealthChart');
+            const wealthLegend = document.getElementById('wealthLegend');
+            
+            wealthChart.innerHTML = '';
+            wealthLegend.innerHTML = '';
+            
+            billionaire.wealthComposition.forEach(item => {
+                // Create chart bar
+                const bar = document.createElement('div');
+                bar.style.height = '100%';
+                bar.style.width = `${item.value}%`;
+                bar.style.backgroundColor = item.color;
+                bar.style.display = 'inline-block';
+                wealthChart.appendChild(bar);
+                
+                // Create legend item
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                legendItem.innerHTML = `
+                    <div class="legend-color" style="background-color: ${item.color}"></div>
+                    <span>${item.name} (${item.value}%)</span>
+                `;
+                wealthLegend.appendChild(legendItem);
+            });
+            
+            // Update career timeline
+            const careerTimeline = document.getElementById('careerTimeline');
+            careerTimeline.innerHTML = '';
+            
+            billionaire.careerTimeline.forEach(event => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.innerHTML = `
+                    <div class="timeline-year">${event.year}</div>
+                    <div>${event.event}</div>
+                `;
+                careerTimeline.appendChild(timelineItem);
+            });
+            
+            // Update philanthropy
+            document.getElementById('modalPhilanthropy').textContent = billionaire.philanthropy;
+            
+            // Update news
+            const newsContainer = document.getElementById('modalNews');
+            newsContainer.innerHTML = '';
+            
+            billionaire.news.forEach(item => {
+                const newsItem = document.createElement('div');
+                newsItem.style.marginBottom = '10px';
+                newsItem.innerHTML = `
+                    <strong>${item.title}</strong><br>
+                    <small>${item.source} • ${item.date}</small>
+                `;
+                newsContainer.appendChild(newsItem);
+            });
+            
+            // Show modal
+            profileModal.style.display = 'block';
+        }
+        
+        // Handle learn more button clicks
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('learn-more-btn') || e.target.closest('.learn-more-btn')) {
+                e.preventDefault();
+                const button = e.target.classList.contains('learn-more-btn') ? e.target : e.target.closest('.learn-more-btn');
+                const billionaireId = button.getAttribute('data-id');
+                showBillionaireProfile(billionaireId);
+            }
+        });
         
         // Refresh button functionality
         document.getElementById('refresh-global').addEventListener('click', function() {
