@@ -6,14 +6,34 @@
     <meta name="google-adsense-account" content="ca-pub-2776727085751679">
     <meta name="description" content="Track Elon Musk, Mukesh Ambani & top global billionaires' net worth in real-time (2025 data). Daily updated rankings, wealth sources, and portfolio breakdowns with expert analysis.">
     <title>Billionaire Wealth Tracker 2025 - Latest Updates on Billioniares| Real-Time Net Worth Rankings</title>
-    <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) with enhanced detection -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTXMGVR1F9"></script>
 <script>
+  // Stronger dataLayer initialization
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CTXMGVR1F9');
+  
+  // Extra verification layer
+  if(typeof gtag === 'function') {
+    gtag('js', new Date());
+    
+    // Enhanced configuration with recommended parameters
+    gtag('config', 'G-CTXMGVR1F9', {
+      'send_page_view': true,
+      'debug_mode': true,  // Remove after verification
+      'page_path': window.location.pathname + window.location.search
+    });
+    
+    // Double-check for Cloudflare/GitHub Pages quirks
+    document.addEventListener('DOMContentLoaded', function() {
+      if(window.location.hostname === 'www.billionairewatch.in') {
+        gtag('event', 'page_view', {
+          'page_title': document.title,
+          'page_location': window.location.href
+        });
+      }
+    });
+  }
 </script>
     <!-- Schema.org markup for Google --> 
     <script type="application/ld+json">
