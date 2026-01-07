@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Billionaire Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Capture the 404 URL and redirect to main app
+        const path = window.location.pathname;
+        
+        // Map clean URLs to your SPA routes
+        const routeMap = {
+            '/about': 'about.html',
+            '/contact': 'contact.html',
+            '/terms': 'terms.html',
+            '/privacy': 'privacy.html',
+            '/disclaimer': 'disclaimer.html'
+        };
+        
+        // Check if this is a known route
+        if (routeMap[path]) {
+            // Store the route and redirect to main app
+            localStorage.setItem('redirectTo', routeMap[path]);
+            window.location.href = '/';
+        } else if (path.includes('.html')) {
+            // Handle direct .html requests
+            const page = path.split('/').pop();
+            localStorage.setItem('redirectTo', page);
+            window.location.href = '/';
+        } else {
+            // Unknown route, go to home
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <p style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
+        Loading Billionaire Watch...
+        <br>
+        <small>Please wait while we redirect you.</small>
+    </p>
+</body>
+</html>
