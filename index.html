@@ -81,7 +81,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Chart.js for historical graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <<script async src="https://cdn.jsdelivr.net/npm/chart.js"></script>n.jsd
     
     <!-- Inline Critical CSS -->
     <style>
@@ -1349,7 +1349,7 @@
         <div class="modal-content">
             <button class="close-modal" id="closeModal">&times;</button>
             <div class="profile-header">
-                <img src="" class="profile-img-large" id="modalProfileImg" alt="">
+   <img src="" class="profile-img-large" id="modalProfileImg" loading="lazy" alt="">
                 <div class="profile-info">
                     <h1 class="profile-name" id="modalName"></h1>
                     <div class="profile-stats">
@@ -3386,5 +3386,25 @@
         `;
         document.head.appendChild(style);
     </script>
-</body>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#222; color:#fff; padding:15px; text-align:center; z-index:1000; font-size:14px;">
+  This website uses cookies to ensure you get the best experience.
+  <button id="accept-cookies" style="margin-left:10px; padding:6px 12px; background:#4CAF50; color:#fff; border:none; cursor:pointer;">Accept</button>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+    // Show banner if no consent stored
+    if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'block';
+    }
+    btn.addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.style.display = 'none';
+    });
+  });
+</script>
+/body>
 </html>
