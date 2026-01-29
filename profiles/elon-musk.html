@@ -117,6 +117,26 @@
         .timeline li {
             margin-bottom: 8px;
         }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .info-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            box-shadow: 0 8px 20px var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .info-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .info-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
     </style>
 </head>
 <body>
@@ -146,6 +166,45 @@
         <section class="bio">
             <h2>Biography</h2>
             <p>Elon Musk ends 2025 as the world’s wealthiest person with approximately $726.3 billion. His wealth primarily comes from Tesla’s continued dominance in electric vehicles and energy storage, and SpaceX’s successful Mars mission and Starlink satellite internet service, which became profitable in 2025. Musk’s visionary leadership has accelerated renewable energy adoption and advanced space exploration, while his neural interface projects point to new frontiers in human–computer integration.</p>
+            <p>Born in Pretoria, South Africa, Musk moved to North America to pursue engineering and entrepreneurship. He has repeatedly focused on technologies with long time horizons, pairing bold vision with rapid iteration and a willingness to pursue vertical integration to control the pace of innovation.</p>
+        </section>
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>Core Companies</h3>
+                <ul>
+                    <li>Tesla: EVs, energy storage, and AI-driven manufacturing.</li>
+                    <li>SpaceX: Launch services, Starship development, and Starlink.</li>
+                    <li>Neuralink: Brain–computer interface research.</li>
+                    <li>The Boring Company: Tunnel infrastructure and mobility.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Innovation Highlights</h3>
+                <ul>
+                    <li>Scaled reusable rockets to lower launch costs.</li>
+                    <li>Expanded battery supply chains for grid storage.</li>
+                    <li>Pioneered direct-to-consumer EV distribution.</li>
+                    <li>Accelerated AI-driven driver assistance programs.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Strategic Priorities</h3>
+                <ul>
+                    <li>Commercializing Starship for lunar and Mars logistics.</li>
+                    <li>Expanding global Starlink coverage.</li>
+                    <li>Scaling next-gen battery chemistry.</li>
+                    <li>Integrating AI tooling across Tesla factories.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Signature Leadership Traits</h3>
+                <ul>
+                    <li>First-principles engineering decisions.</li>
+                    <li>High-risk, high-reward capital allocation.</li>
+                    <li>Hands-on product review and iteration.</li>
+                    <li>Bold public commitments to long-term goals.</li>
+                </ul>
+            </div>
         </section>
         <section class="chart-section">
             <h2>Historical Net Worth</h2>
@@ -168,6 +227,45 @@
         <section class="philanthropy">
             <h2>Philanthropy</h2>
             <p>In 2025, Musk donated $8 billion worth of Tesla shares to various causes including renewable energy research, science education and the XPRIZE Carbon Removal competition.</p>
+            <p>Additional giving focuses on STEM education, climate resilience, and local workforce development initiatives tied to advanced manufacturing hubs.</p>
+        </section>
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>Notable Projects</h3>
+                <ul>
+                    <li>Starship: Fully reusable heavy-lift launch vehicle.</li>
+                    <li>Dojo: AI training hardware for autonomous driving.</li>
+                    <li>Megapack: Utility-scale energy storage deployments.</li>
+                    <li>Prufrock: Fast-boring tunnels for transit corridors.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Public Perception</h3>
+                <ul>
+                    <li>Praised for climate and space innovation.</li>
+                    <li>Criticized for aggressive timelines and volatility.</li>
+                    <li>Known for candid, high-visibility communications.</li>
+                    <li>Polarizing figure with a global following.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Wealth Drivers</h3>
+                <ul>
+                    <li>Tesla equity and performance-based options.</li>
+                    <li>SpaceX valuation growth and revenue expansion.</li>
+                    <li>Starlink subscription scale and margin growth.</li>
+                    <li>Private venture holdings and IP value.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Risks &amp; Watchlist</h3>
+                <ul>
+                    <li>Regulatory scrutiny across multiple markets.</li>
+                    <li>Launch cadence and production bottlenecks.</li>
+                    <li>Macro volatility impacting equity valuations.</li>
+                    <li>Competition in EVs and satellite connectivity.</li>
+                </ul>
+            </div>
         </section>
     </main>
     <script>
