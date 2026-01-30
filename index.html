@@ -652,6 +652,41 @@
             margin-top: auto;
             width: 100%;
         }
+
+        /* Add this to your existing CSS in the BILLIONAIRE CARDS section */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    min-height: 44px;
+    font-size: 0.95rem;
+    background-color: var(--secondary);
+    color: var(--text);
+    width: 100%;
+}
+
+.see-more-btn:hover, .see-more-btn:focus {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
         
         /* ===== SECTIONS (Home Page) ===== */
         .section-header {
@@ -3355,47 +3390,56 @@
             updateTime();
         }
 
-        // Render Billionaire Cards
-        function renderBillionaireCards(data, container) {
-            if (!container) return;
+       // Render Billionaire Cards
+function renderBillionaireCards(data, container) {
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    data.forEach(billionaire => {
+        const isProfit = billionaire.dailyChange > 0;
+        const changeClass = isProfit ? 'up' : (billionaire.dailyChange === 0 ? 'neutral' : 'down');
+        const changeIcon = isProfit ? 'arrow-up' : (billionaire.dailyChange === 0 ? 'equals' : 'arrow-down');
+        
+        // Determine the profile URL based on the billionaire ID
+        const profileUrl = `profiles/${billionaire.id}.html`;
+        
+        const card = document.createElement('div');
+        card.className = 'billionaire-card';
+        card.innerHTML = `
+            <div class="rank-badge">${billionaire.rank}</div>
+            <img src="${billionaire.image}" class="profile-img" alt="${billionaire.name}" loading="lazy">
+            ${billionaire.rank === 1 ? '<div class="crown-animation"><i class="fas fa-crown"></i></div>' : ''}
             
-            container.innerHTML = '';
+            <div class="wealth-meter">
+                <div class="wealth-bar" style="width: ${(billionaire.netWorth / data[0].netWorth) * 100}%"></div>
+            </div>
             
-            data.forEach(billionaire => {
-                const isProfit = billionaire.dailyChange > 0;
-                const changeClass = isProfit ? 'up' : (billionaire.dailyChange === 0 ? 'neutral' : 'down');
-                const changeIcon = isProfit ? 'arrow-up' : (billionaire.dailyChange === 0 ? 'equals' : 'arrow-down');
-                
-                const card = document.createElement('div');
-                card.className = 'billionaire-card';
-                card.innerHTML = `
-                    <div class="rank-badge">${billionaire.rank}</div>
-                    <img src="${billionaire.image}" class="profile-img" alt="${billionaire.name}" loading="lazy">
-                    ${billionaire.rank === 1 ? '<div class="crown-animation"><i class="fas fa-crown"></i></div>' : ''}
-                    
-                    <div class="wealth-meter">
-                        <div class="wealth-bar" style="width: ${(billionaire.netWorth / data[0].netWorth) * 100}%"></div>
-                    </div>
-                    
-                    <div class="wealth-change ${changeClass}">
-                        <i class="fas fa-${changeIcon}"></i> ${billionaire.dailyChange > 0 ? '+' : ''}${billionaire.dailyChange}% today
-                    </div>
-                    
-                    <h3>${billionaire.name}</h3>
-                    <p class="net-worth">$${billionaire.netWorth}B</p>
-                    <p class="primary-source">${billionaire.source}</p>
-                    
-                    <button class="btn btn-primary learn-more-btn" data-id="${billionaire.id}">
-                        <i class="fas fa-chart-line"></i> View Historical Data
-                    </button>
-                    
-                    <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=${billionaire.country}" 
-                         class="country-flag" alt="${billionaire.country} Flag" loading="lazy">
-                `;
-                
-                container.appendChild(card);
-            });
-        }
+            <div class="wealth-change ${changeClass}">
+                <i class="fas fa-${changeIcon}"></i> ${billionaire.dailyChange > 0 ? '+' : ''}${billionaire.dailyChange}% today
+            </div>
+            
+            <h3>${billionaire.name}</h3>
+            <p class="net-worth">$${billionaire.netWorth}B</p>
+            <p class="primary-source">${billionaire.source}</p>
+            
+            <!-- Button Container -->
+            <div class="button-container" style="display: flex; flex-direction: column; gap: 10px; margin-top: auto;">
+                <button class="btn btn-primary learn-more-btn" data-id="${billionaire.id}">
+                    <i class="fas fa-chart-line"></i> View Historical Data
+                </button>
+                <a href="${profileUrl}" class="btn see-more-btn" style="background-color: var(--secondary); color: var(--text); border-color: var(--accent);">
+                    <i class="fas fa-external-link-alt"></i> See Full Profile
+                </a>
+            </div>
+            
+            <img src="https://placehold.co/100x60/1a1a2e/ffffff?text=${billionaire.country}" 
+                 class="country-flag" alt="${billionaire.country} Flag" loading="lazy">
+        `;
+        
+        container.appendChild(card);
+    });
+}
 
         // Initialize Profile Modal
         function initProfileModal() {
