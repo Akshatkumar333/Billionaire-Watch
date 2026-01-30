@@ -75,7 +75,7 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-    <!-- Inherit same styles as Elon Musk profile -->
+    <!-- Fixed CSS - Updated with proper chart sizing -->
     <style>
         :root {
             --primary: #1a1a2e;
@@ -207,13 +207,19 @@
             font-size: 0.9rem;
             color: var(--neutral);
         }
+        
+        /* FIXED: Chart Section Height */
         .chart-section, .wealth-comp {
             background-color: var(--card-bg);
             padding: 25px;
             border-radius: var(--border-radius);
             box-shadow: 0 5px 15px var(--shadow);
             margin-bottom: 30px;
+            position: relative;
+            min-height: 300px;
+            max-height: 400px;
         }
+        
         .chart-section h2, .wealth-comp h2 {
             color: var(--accent);
             margin-top: 0;
@@ -221,6 +227,14 @@
             border-bottom: 2px solid var(--accent);
             padding-bottom: 10px;
         }
+        
+        /* Canvas Styles for Proper Sizing */
+        #netWorthChart, #wealthPieChart {
+            width: 100% !important;
+            height: 100% !important;
+            max-height: 350px;
+        }
+        
         .content-section {
             background-color: var(--card-bg);
             padding: 25px;
@@ -302,6 +316,8 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
+        
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -321,6 +337,14 @@
             }
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+            .chart-section, .wealth-comp {
+                min-height: 250px;
+                max-height: 350px;
+                padding: 15px;
+            }
+            #netWorthChart, #wealthPieChart {
+                max-height: 300px;
             }
         }
     </style>
@@ -398,7 +422,7 @@
         <section class="chart-section">
             <h2><i class="fas fa-chart-line"></i> Historical Net Worth (2016-2026)</h2>
             <p>Track Larry Page's wealth evolution from 2016 to 2026. His net worth has grown from $37.2B to $256.9B in a decade, driven by Google's diversification into AI, cloud computing, and autonomous technology.</p>
-            <canvas id="netWorthChart" height="400"></canvas>
+            <canvas id="netWorthChart"></canvas> <!-- REMOVED: height="400" -->
         </section>
         
         <!-- Wealth Composition -->
@@ -407,7 +431,7 @@
             <p>Larry Page's $256.9 billion fortune is primarily concentrated in Alphabet stock, with strategic investments in renewable energy and transportation technology.</p>
             <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
                 <div style="flex: 1; min-width: 300px;">
-                    <canvas id="wealthPieChart" height="300"></canvas>
+                    <canvas id="wealthPieChart"></canvas> <!-- REMOVED: height="300" -->
                 </div>
                 <div style="flex: 1; min-width: 300px;">
                     <h3>Asset Breakdown:</h3>
