@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautam Adani – Billionaire Profile | Adani Group Chairman | Billionaire Watch</title>
+    <meta name="description" content="Comprehensive billionaire real time net worth analysis of Gautam Adani, Adani Group founder. Track his wealth from ports to renewable energy, historical data 2016-2026, and competitive position.">
+    <meta name="keywords" content="Gautam Adani net worth, Adani Group, Indian billionaire wealth tracker, Adani ports, Adani Green Energy, billionaire real time net worth India, infrastructure billionaire, renewable energy wealth">
+    <meta name="author" content="Billionaire Watch">
+    <meta property="og:title" content="Gautam Adani – $56.3B Net Worth | Infrastructure & Energy Billionaire">
+    <meta property="og:description" content="Track Gautam Adani's billionaire real time net worth, Adani Group expansion, green energy investments, and wealth evolution from ports to renewables.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #f9c74f;
+            --text: #e6e6e6;
+            --profit: #4ade80;
+            --loss: #f87171;
+            --neutral: #94a3b8;
+            --card-bg: #16213e;
+            --header-bg: #1a1a2e;
+            --body-bg: #0f0f1a;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --border-radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        body {
+            background-color: var(--body-bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: var(--header-bg);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: var(--border-radius);
+            background-color: var(--secondary);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .profile-header img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+        }
+        .stat {
+            font-weight: 600;
+        }
+        .chart-section, .wealth-comp {
+            height: 400px;
+        }
+        .timeline ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .timeline li {
+            margin-bottom: 8px;
+        }
+
+        /* Content Sections */
+        .wealth-sources, .current-developments, .historical-context, 
+        .competitive-analysis, .faq-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #16213e;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .wealth-sources h2, .current-developments h2, 
+        .historical-context h2, .competitive-analysis h2, 
+        .faq-section h2 {
+            color: #f9c74f;
+            border-bottom: 2px solid #f9c74f;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .wealth-sources h3, .current-developments h3, 
+        .historical-context h3, .competitive-analysis h3, 
+        .faq-section h3 {
+            color: #f9c74f;
+            margin-top: 20px;
+        }
+
+        .wealth-sources ul, .historical-context ul {
+            margin-left: 20px;
+        }
+
+        .wealth-sources li, .historical-context li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #94a3b8;
+            text-align: left;
+        }
+        
+        th {
+            background: rgba(249, 199, 79, 0.2);
+            color: #f9c74f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo"><i class="fas fa-crown"></i> Billionaire Watch</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="../contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="profile-header">
+            <img src="https://placehold.co/400x400/16213e/f9c74f?text=Gautam+Adani" alt="Gautam Adani">
+            <div>
+                <h1>Gautam Adani</h1>
+                <p class="stat">Net Worth: <strong>$56.3 B</strong> (Jan 2026)</p>
+                <p class="stat">Daily Change: <strong>-0.2%</strong></p>
+                <p class="stat">Sources: <strong>Adani Group (Ports, Energy, Infrastructure)</strong></p>
+                <p class="stat">Country: <strong>India</strong> 🇮🇳</p>
+                <p class="stat">Rank: <strong>#2 in India, #24 Global</strong></p>
+            </div>
+        </section>
+        
+        <section class="bio">
+            <h2><i class="fas fa-user-tie"></i> Biography</h2>
+            <p>Gautam Adani ranks second in India with approximately $56.3 billion in January 2026. As founder and chairman of the Adani Group, he built India's largest infrastructure conglomerate spanning ports, airports, renewable energy, mining, and defense. His rise from college dropout to infrastructure tycoon represents one of India's most remarkable entrepreneurial stories.</p>
+        </section>
+        
+        <section class="chart-section">
+            <h2><i class="fas fa-chart-line"></i> Historical Net Worth (2016-2026)</h2>
+            <canvas id="netWorthChart"></canvas>
+        </section>
+        
+        <section class="wealth-comp">
+            <h2><i class="fas fa-pie-chart"></i> Wealth Composition</h2>
+            <canvas id="wealthPieChart"></canvas>
+        </section>
+        
+        <section class="timeline">
+            <h2><i class="fas fa-history"></i> Career Timeline</h2>
+            <ul>
+                <li><strong>1988:</strong> Started Adani Exports as commodity trading firm</li>
+                <li><strong>1995:</strong> Entered port business with Mundra Port development</li>
+                <li><strong>2006:</strong> Listed Adani Enterprises on stock exchanges</li>
+                <li><strong>2015:</strong> Expanded into renewable energy with Adani Green</li>
+                <li><strong>2020:</strong> Became India's largest private port operator</li>
+                <li><strong>2022:</strong> Briefly became Asia's richest person ($150B net worth)</li>
+                <li><strong>2025:</strong> Focused on green energy transition post-2023 challenges</li>
+            </ul>
+        </section>
+        
+        <section class="philanthropy">
+            <h2><i class="fas fa-hands-helping"></i> Philanthropy</h2>
+            <p>Adani Foundation committed $200 million in 2025 for education, healthcare, and sustainable development projects. Key initiatives include skill development centers training 100,000 youth annually, healthcare programs reaching 5 million people, and sustainable agriculture projects supporting 50,000 farmers.</p>
+        </section>
+        
+        <!-- NEW CONTENT SECTIONS -->
+        
+        <section class="wealth-sources">
+            <h2><i class="fas fa-chart-line"></i> Net Worth Analysis & Wealth Sources</h2>
+            <p>As of January 2026, Gautam Adani's net worth is approximately <strong>$56.3 billion</strong>, primarily derived from his controlling stakes in Adani Group companies. His wealth experienced significant volatility between 2022-2024 but stabilized in 2025-2026 with renewed investor confidence.</p>
+            
+            <div class="source-details">
+                <h3>Detailed Ownership & Valuation (2026 Estimates)</h3>
+                <ul>
+                    <li><strong>Adani Green Energy:</strong> ~60% stake in world's largest solar developer, valued at $70B</li>
+                    <li><strong>Adani Ports & SEZ:</strong> ~65% stake in India's largest port operator, valued at $45B</li>
+                    <li><strong>Adani Enterprises:</strong> ~75% stake in incubator business, valued at $35B</li>
+                    <li><strong>Adani Transmission:</strong> ~70% stake in power distribution, valued at $25B</li>
+                    <li><strong>Adani Total Gas:</strong> ~40% stake in city gas distribution, valued at $15B</li>
+                </ul>
+            </div>
+            
+            <div class="net-worth-comparison">
+                <h3>Wealth Volatility Timeline</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Net Worth</th>
+                            <th>Key Events</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Jan 2022</td><td>$90B</td><td>Rapid expansion phase</td></tr>
+                        <tr><td>Sep 2022</td><td>$150B</td><td>Peak, briefly Asia's richest</td></tr>
+                        <tr><td>Jan 2023</td><td>$60.8B</td><td>Hindenburg Report impact</td></tr>
+                        <tr><td>Dec 2024</td><td>$68.3B</td><td>Partial recovery</td></tr>
+                        <tr><td>Jan 2026</td><td>$56.3B</td><td>Stabilized with green energy focus</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="current-developments">
+            <h2><i class="fas fa-rocket"></i> 2026 Strategic Focus: Green Energy & Infrastructure</h2>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">🌱 Adani Green: World's Largest Renewable Portfolio</h3>
+                <p>Adani Green Energy aims to achieve 45 GW renewable capacity by 2030, with current capacity of 20 GW. The company is investing $20 billion in solar, wind, and green hydrogen projects across India, Africa, and Southeast Asia.</p>
+            </div>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">✈️ Airport Infrastructure Expansion</h3>
+                <p>Adani Airports now operates 8 airports handling 200+ million passengers annually. The $2 billion Navi Mumbai Airport project, scheduled for 2026 completion, will become India's second largest airport.</p>
+            </div>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">🚢 Ports & Logistics Dominance</h3>
+                <p>Adani Ports controls 30% of India's port capacity with 14 ports. The company is developing $3 billion worth of port infrastructure to handle 1 billion tons of cargo annually by 2030.</p>
+            </div>
+        </section>
+        
+        <section class="historical-context">
+            <h2><i class="fas fa-history"></i> Business Philosophy & Risk Management</h2>
+            <p>Gautam Adani's business approach is characterized by:</p>
+            
+            <h3>Core Business Principles</h3>
+            <ul>
+                <li><strong>Infrastructure Focus:</strong> Investing in capital-intensive sectors with high entry barriers</li>
+                <li><strong>Government Alignment:</strong> Aligning businesses with national priorities (Make in India, green energy)</li>
+                <li><strong>Vertical Integration:</strong> Controlling entire value chains from ports to power distribution</li>
+                <li><strong>Debt Management:</strong> Using strategic leverage for rapid expansion while maintaining cash flows</li>
+                <li><strong>Geographic Advantage:</strong> Focusing on India's growth story and infrastructure deficit</li>
+            </ul>
+            
+            <p>This approach enabled rapid growth but also exposed the group to market volatility and regulatory scrutiny, particularly in 2023.</p>
+        </section>
+        
+        <section class="competitive-analysis">
+            <h2><i class="fas fa-trophy"></i> Competitive Position & Industry Leadership</h2>
+            <p>Gautam Adani dominates several key infrastructure sectors in India:</p>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin:20px 0;">
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">Ports Market Share</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">30%</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Largest in India</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">Renewable Capacity</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">20 GW</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Largest solar developer</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">Airports Operated</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">8</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Including Mumbai</p>
+                </div>
+            </div>
+            
+            <p>The Adani Group's competitive advantage lies in its integrated infrastructure model, allowing it to offer end-to-end solutions across ports, logistics, and energy.</p>
+        </section>
+        
+        <section class="faq-section">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions About Gautam Adani</h2>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">How did Gautam Adani build his wealth?</h3>
+                <p>Adani started with commodity trading in 1988, then entered port operations in 1995. He systematically expanded into adjacent infrastructure sectors - power generation, transmission, renewable energy, airports, and defense - leveraging India's infrastructure growth story.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What happened to Adani's net worth in 2023?</h3>
+                <p>Adani's net worth dropped from $150B in September 2022 to $60.8B in January 2023 following the Hindenburg Research report allegations. The group lost over $100B in market value but has since recovered partially through debt reduction and renewed investor focus on green energy.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What is Adani Green Energy's target?</h3>
+                <p>Adani Green aims to become the world's largest renewable energy company by 2030 with 45 GW capacity. The company is currently the largest solar power developer globally with 20 GW operational capacity.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">How many airports does Adani operate?</h3>
+                <p>Adani Airports operates 8 major Indian airports including Mumbai, Ahmedabad, Lucknow, and Mangaluru, handling over 200 million passengers annually (25% of India's air traffic).</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What is Adani's educational background?</h3>
+                <p>Gautam Adani dropped out of Gujarat University's commerce program in his second year to pursue business opportunities in Mumbai. He is largely self-taught in business and infrastructure management.</p>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Historical Net Worth Chart
+        const netWorthData = {
+            labels: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+            datasets: [{
+                label: "Gautam Adani's Net Worth (Billions USD)",
+                data: [5.5, 7.1, 9.2, 11.8, 15.1, 25.2, 90, 150, 60.8, 68.3, 56.3],
+                borderColor: '#8ac926',
+                backgroundColor: 'rgba(138, 201, 38, 0.2)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.3,
+                pointBackgroundColor: '#8ac926'
+            }]
+        };
+        
+        const netCtx = document.getElementById('netWorthChart').getContext('2d');
+        new Chart(netCtx, {
+            type: 'line',
+            data: netWorthData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        display: true,
+                        labels: {
+                            color: '#e6e6e6'
+                        }
+                    },
+                    tooltip: { 
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.parsed.y + 'B (' + context.label + ')';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: { 
+                        ticks: { 
+                            color: '#e6e6e6',
+                            callback: function(value) {
+                                return '$' + value + 'B';
+                            }
+                        }, 
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } 
+                    },
+                    x: { 
+                        ticks: { color: '#e6e6e6' }, 
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } 
+                    }
+                }
+            }
+        });
+        
+        // Wealth Composition Pie Chart
+        const wealthData = {
+            labels: ['Adani Green Energy', 'Adani Ports & SEZ', 'Adani Enterprises', 'Other Group Companies'],
+            datasets: [{
+                data: [35, 25, 20, 20],
+                backgroundColor: ['#8ac926', '#ffca3a', '#ff595e', '#1982c4'],
+                borderWidth: 1
+            }]
+        };
+        
+        const wealthCtx = document.getElementById('wealthPieChart').getContext('2d');
+        new Chart(wealthCtx, {
+            type: 'doughnut',
+            data: wealthData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#e6e6e6'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
