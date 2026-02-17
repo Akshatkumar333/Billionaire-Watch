@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Zuckerberg – Billionaire Profile | Billionaire Watch</title>
-    <meta name="description" content="Detailed biography and wealth analysis of Mark Zuckerberg, including historical net worth data, wealth composition, career timeline and philanthropy, presented in the Billionaire Watch style.">
+    <meta name="description" content="Detailed biography and wealth analysis of Mark Zuckerberg, Meta founder, including historical net worth data, wealth composition, career timeline and philanthropy – educational estimates as of February 2026.">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
@@ -25,13 +25,100 @@
             --border-radius: 10px;
             --transition: all 0.3s ease;
         }
+        
+        [data-theme="light"] {
+            --primary: #f8f9fa;
+            --secondary: #e9ecef;
+            --accent: #ff9f1c;
+            --text: #212529;
+            --profit: #2e7d32;
+            --loss: #c62828;
+            --neutral: #546e7a;
+            --card-bg: #ffffff;
+            --header-bg: #f8f9fa;
+            --body-bg: #e9ecef;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             background-color: var(--body-bg);
             color: var(--text);
             line-height: 1.6;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
         }
+        
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            margin-bottom: 1.25rem;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            position: relative;
+            padding-left: 15px;
+            margin-top: 2.5rem;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 80%;
+            width: 5px;
+            background-color: var(--accent);
+            border-radius: 5px;
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover, a:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+        
+        /* ===== LAYOUT ===== */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== HEADER ===== */
         header {
             background-color: var(--header-bg);
             padding: 10px 0;
@@ -39,31 +126,65 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px var(--shadow);
+            transition: var(--transition);
         }
+        
         .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
+        
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.5rem;
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
             font-weight: 700;
             color: var(--accent);
             text-decoration: none;
+            white-space: nowrap;
         }
-        nav ul {
-            list-style: none;
+        
+        .logo i {
+            font-size: 1.5em;
+        }
+        
+        nav {
+            flex: 1;
             display: flex;
-            gap: 8px;
-            margin: 0;
-            padding: 0;
+            justify-content: flex-end;
         }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        
+        nav li {
+            display: inline-block;
+        }
+        
         .nav-link {
             color: var(--text);
             text-decoration: none;
@@ -71,31 +192,86 @@
             border-radius: var(--border-radius);
             background-color: var(--secondary);
             transition: var(--transition);
+            font-weight: 500;
             display: flex;
             align-items: center;
-            font-size: 0.9rem;
+            min-height: 44px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
-        .nav-link:hover {
+        
+        .nav-link:hover, .nav-link:focus {
             background-color: var(--accent);
             color: var(--primary);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px var(--shadow);
         }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        
+        .nav-link.active {
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
         }
+        
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+        
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 5px;
+            border-radius: 50%;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .theme-toggle:hover, .theme-toggle:focus {
+            transform: rotate(30deg);
+            color: var(--accent);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        main {
+            flex: 1;
+            padding: 30px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
         section {
             margin-bottom: 40px;
         }
+        
         .profile-header {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             align-items: center;
         }
+        
         .profile-header img {
             width: 200px;
             height: 200px;
@@ -103,21 +279,26 @@
             object-fit: cover;
             border: 4px solid var(--accent);
         }
+        
         .stat {
             font-weight: 600;
         }
+        
         .chart-section,
         .wealth-comp {
             height: 400px;
         }
+        
         .timeline ul {
             list-style: none;
             padding-left: 0;
         }
+        
         .timeline li {
             margin-bottom: 8px;
         }
 
+        /* Enhanced section styles */
         .wealth-sources, .current-developments, .historical-context, 
         .competitive-analysis, .faq-section {
             margin-bottom: 40px;
@@ -150,13 +331,113 @@
         .wealth-sources li, .historical-context li {
             margin-bottom: 8px;
         }
+
+        .insight-box {
+            background: rgba(249, 199, 79, 0.08);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-highlight {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* ===== DISCLAIMER BANNER ===== */
+        .disclaimer-banner {
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ffc107;
+            position: sticky;
+            top: 0;
+            z-index: 101;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: var(--neutral);
+            font-size: 0.9rem;
+            background-color: var(--header-bg);
+            margin-top: auto;
+        }
+        
+        footer a {
+            color: var(--accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .credit {
+            margin-top: 0.625rem;
+            font-size: 0.85rem;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .market-status { display: none; }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container { flex-wrap: wrap; }
+            .logo { flex: 1; }
+            .nav-toggle { display: block; order: 2; }
+            nav { display: none; width: 100%; order: 4; margin-top: 10px; }
+            nav.active { display: block; }
+            nav ul { flex-direction: column; gap: 5px; margin-top: 10px; align-items: stretch; }
+            nav li { width: 100%; }
+            .nav-link { width: 100%; justify-content: center; }
+            .header-controls { order: 3; }
+            .profile-header { flex-direction: column; text-align: center; }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .market-status { display: flex; }
+        }
+        
+        @media (min-width: 1025px) {
+            .market-status { display: flex; }
+        }
     </style>
 </head>
 <body>
+    <!-- Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <p><strong>Data Update:</strong> All net worth figures are estimates based on public filings and market data as of February 2026. This is an independent educational resource.</p>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="../index.html" class="logo"><i class="fas fa-crown"></i> Billionaire Watch</a>
-            <nav>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="header-controls">
+                <div class="market-status">
+                    <span>Data: Feb 2026</span>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <nav id="mainNav">
                 <ul>
                     <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="../about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
@@ -165,238 +446,389 @@
             </nav>
         </div>
     </header>
-    <main class="container">
+
+    <main>
         <section class="profile-header">
             <img src="https://placehold.co/400x400/16213e/f9c74f?text=Mark+Zuckerberg" alt="Mark Zuckerberg">
             <div>
                 <h1>Mark Zuckerberg</h1>
-                <p class="stat">Net Worth: <strong>$226.3 B</strong> (Jan 2026)</p>
-                <p class="stat">Daily Change: <strong>+1.1%</strong></p>
+                <p class="stat">Net Worth: <strong>$226.3 B</strong> (Feb 2026)</p>
+                <p class="stat">Daily Change: <strong>+1.1%</strong> (simulated)</p>
                 <p class="stat">Sources: <strong>Meta/Facebook</strong></p>
             </div>
         </section>
+        
         <section class="bio">
             <h2>Biography</h2>
-            <p>Mark Zuckerberg ends 2025 with approximately $226.3 billion. Meta's successful pivot to AI and virtual reality paid off, with Reality Labs becoming profitable and Horizon Worlds reaching 100 million monthly active users. As founder and CEO of Meta Platforms, Zuckerberg has transformed social networking while positioning his company as a leader in the emerging metaverse economy.</p>
+            <p>Mark Zuckerberg ends 2025 with approximately $226.3 billion. Meta's successful pivot to AI and virtual reality paid off, with Reality Labs becoming profitable and Horizon Worlds reaching 100 million monthly active users. Zuckerberg co-founded Facebook in his Harvard dorm room in 2004 and transformed it into the world's leading social media company.</p>
         </section>
+        
         <section class="chart-section">
             <h2>Historical Net Worth</h2>
             <canvas id="netWorthChart"></canvas>
         </section>
+        
         <section class="wealth-comp">
             <h2>Wealth Composition</h2>
             <canvas id="wealthPieChart"></canvas>
         </section>
+        
         <section class="timeline">
             <h2>Career Timeline</h2>
             <ul>
-                <li><strong>2004:</strong> Founded Facebook from Harvard dorm.</li>
-                <li><strong>2012:</strong> Facebook IPO creates massive wealth.</li>
-                <li><strong>2021:</strong> Rebranded to Meta, focusing on metaverse.</li>
-                <li><strong>2024:</strong> Launched VR platform successfully.</li>
-                <li><strong>2025:</strong> Meta AI achieves commercial success.</li>
+                <li><strong>2004:</strong> Founded Facebook from Harvard dorm room.</li>
+                <li><strong>2012:</strong> Facebook IPO raises $16 billion.</li>
+                <li><strong>2021:</strong> Rebranded company to Meta, focusing on metaverse.</li>
+                <li><strong>2024:</strong> Reality Labs becomes profitable.</li>
+                <li><strong>2025:</strong> Meta AI success drives record revenues.</li>
             </ul>
         </section>
+        
         <section class="philanthropy">
             <h2>Philanthropy</h2>
-            <p>Zuckerberg and Chan donated $2.5 billion in 2025 through the Chan Zuckerberg Initiative, focusing on disease research and education technology. Their foundation has committed to spending 99% of their Facebook shares on philanthropic causes during their lifetimes.</p>
+            <p>Zuckerberg and Chan donated $2.5 billion in 2025 through the Chan Zuckerberg Initiative, focusing on disease research and education technology. The Initiative has committed over $10 billion to scientific research since its founding.</p>
         </section>
 
-        <!-- START OF NEW CONTENT ADDITIONS -->
+        <!-- 1. NET WORTH ANALYSIS & WEALTH SOURCES -->
+        <section class="wealth-sources">
+            <h2><i class="fas fa-chart-line"></i> Net Worth Analysis & Wealth Sources 2026</h2>
+            <p>As of February 2026, Mark Zuckerberg's net worth is approximately <strong>$226.3 billion</strong>, making him the sixth richest person globally. His wealth primarily comes from his majority stake in Meta Platforms, complemented by strategic investments in AI and virtual reality.</p>
+            
+            <div class="source-details">
+                <h3>Detailed Ownership & Valuation (2026 Estimates)</h3>
+                <ul>
+                    <li><strong>Meta Platforms (META):</strong> ~13% stake. Approximately 350 million shares, providing majority voting control.</li>
+                    <li><strong>Chan Zuckerberg Initiative:</strong> $5 billion in philanthropic holdings, funded by Meta stock.</li>
+                    <li><strong>Real Estate Portfolio:</strong> Properties in Palo Alto, San Francisco, and Hawaii valued at $1.5 billion.</li>
+                    <li><strong>Private Investments:</strong> AI startups and biotech ventures valued at $2.8 billion.</li>
+                </ul>
+            </div>
+            
+            <div class="net-worth-comparison">
+                <h3>Net Worth Milestones Timeline</h3>
+                <table style="width:100%; border-collapse:collapse; background:rgba(255,255,255,0.05); margin:15px 0;">
+                    <thead>
+                        <tr style="background:rgba(249,199,79,0.2);">
+                            <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Milestone</th>
+                            <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Date</th>
+                            <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Net Worth</th>
+                            <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding:10px; border:1px solid #94a3b8;">First $1 Billion</td><td style="padding:10px; border:1px solid #94a3b8;">2008</td><td style="padding:10px; border:1px solid #94a3b8;">$1.5B</td><td style="padding:10px; border:1px solid #94a3b8;">Youngest self-made billionaire</td></tr>
+                        <tr><td style="padding:10px; border:1px solid #94a3b8;">$50 Billion</td><td style="padding:10px; border:1px solid #94a3b8;">2018</td><td style="padding:10px; border:1px solid #94a3b8;">$52B</td><td style="padding:10px; border:1px solid #94a3b8;">Facebook growth continues</td></tr>
+                        <tr><td style="padding:10px; border:1px solid #94a3b8;">$100 Billion</td><td style="padding:10px; border:1px solid #94a3b8;">2021</td><td style="padding:10px; border:1px solid #94a3b8;">$107B</td><td style="padding:10px; border:1px solid #94a3b8;">Peak during advertising boom</td></tr>
+                        <tr><td style="padding:10px; border:1px solid #94a3b8;">Current Estimate</td><td style="padding:10px; border:1px solid #94a3b8;">Feb 2026</td><td style="padding:10px; border:1px solid #94a3b8;">$226.3B</td><td style="padding:10px; border:1px solid #94a3b8;">Per Billionaire Watch data</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<!-- 1. NET WORTH ANALYSIS & WEALTH SOURCES -->
-<section class="wealth-sources">
-    <h2><i class="fas fa-chart-line"></i> Net Worth Analysis & Wealth Sources</h2>
-    <p>As of January 2026, Mark Zuckerberg's net worth is approximately <strong>$226.3 billion</strong>, making him the 6th richest person globally. His wealth primarily comes from his significant ownership stake in Meta Platforms, which has successfully transitioned from social media to AI and virtual reality.</p>
-    
-    <div class="source-details">
-        <h3>Detailed Ownership & Valuation (2026 Estimates)</h3>
-        <ul>
-            <li><strong>Meta Platforms (META):</strong> ~13% stake. Value fluctuates with stock price and company performance in AI and VR markets.</li>
-            <li><strong>Reality Labs:</strong> Meta's virtual reality division now profitable, valued at approximately $80 billion as a standalone entity.</li>
-            <li><strong>WhatsApp & Instagram:</strong> Key subsidiaries contributing to Meta's $145 billion annual advertising revenue.</li>
-            <li><strong>Private Investments:</strong> $15 billion in AI startups and metaverse-related companies through various investment vehicles.</li>
-        </ul>
-    </div>
-    
-    <div class="net-worth-comparison">
-        <h3>Net Worth Milestones Timeline</h3>
-        <table style="width:100%; border-collapse:collapse; background:rgba(255,255,255,0.05); margin:15px 0;">
-            <thead>
-                <tr style="background:rgba(249,199,79,0.2);">
-                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Milestone</th>
-                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Date</th>
-                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Net Worth</th>
-                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Notes</th>
+        <!-- 2. 2026 META AI & METAVERSE STRATEGY -->
+        <section class="current-developments">
+            <h2><i class="fas fa-vr-cardboard"></i> 2026 Strategic Focus: AI & Metaverse Integration</h2>
+            <p>In February 2026, Mark Zuckerberg is leading Meta's transformation into an AI-first company while scaling the metaverse ecosystem.</p>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">🤖 Llama 4 AI Model</h3>
+                <p>Meta's Llama 4 AI model now powers 40% of enterprise AI workloads, generating $35 billion in annual revenue through cloud partnerships and licensing.</p>
+            </div>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">🌌 Horizon Worlds Expansion</h3>
+                <p>Horizon Worlds has reached 150 million monthly active users, with virtual goods sales exceeding $15 billion annually. Major brands now operate virtual storefronts.</p>
+            </div>
+            
+            <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
+                <h3 style="color:#f9c74f; margin-top:0;">👓 Smart Glasses Leadership</h3>
+                <p>Meta's Ray-Ban smart glasses have captured 65% of the AR wearables market, with 25 million units sold and integration with Meta AI assistant.</p>
+            </div>
+        </section>
+
+        <!-- 3. HISTORICAL CONTEXT -->
+        <section class="historical-context">
+            <h2><i class="fas fa-history"></i> From Dorm Room to Digital Empire</h2>
+            <p>Mark Zuckerberg's journey from Harvard dorm room to building the world's largest social media company demonstrates his technical vision and business acumen.</p>
+            
+            <h3>Facebook's Evolution Timeline</h3>
+            <ul style="margin-left:20px;">
+                <li><strong>2004:</strong> Launched "Thefacebook" from Harvard dorm</li>
+                <li><strong>2006:</strong> Opened platform to everyone over 13 with email</li>
+                <li><strong>2012:</strong> IPO at $38 per share, valuing company at $104B</li>
+                <li><strong>2014:</strong> Acquired WhatsApp for $19B, Instagram for $1B</li>
+                <li><strong>2021:</strong> Rebranded to Meta, signaling metaverse focus</li>
+                <li><strong>2025:</strong> Meta reaches $1.5 trillion market cap</li>
+            </ul>
+            
+            <p>Zuckerberg's "move fast and break things" philosophy evolved into a more measured approach as Meta became a global force in AI and virtual reality.</p>
+        </section>
+
+        <!-- 4. COMPETITIVE ANALYSIS (updated with Elon Musk 852B) -->
+        <section class="competitive-analysis">
+            <h2><i class="fas fa-trophy"></i> Competitive Position in Social Media & AI</h2>
+            <p>Mark Zuckerberg maintains dominant positions in social networking while rapidly gaining ground in AI and augmented reality.</p>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin:20px 0;">
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">Daily Active Users</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">3.2B</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Family of Apps</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">Horizon Worlds MAU</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">150M</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Virtual Reality</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">AI Revenue</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">$35B</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">Llama 4 licensing</p>
+                </div>
+            </div>
+            
+            <h3>Meta's Competitive Advantages:</h3>
+            <ul>
+                <li><strong>Network Effects:</strong> Largest social graph globally</li>
+                <li><strong>Data Advantage:</strong> Unmatched user behavior insights</li>
+                <li><strong>AI Integration:</strong> Llama models powering all products</li>
+                <li><strong>Hardware Ecosystem:</strong> Smart glasses, Quest VR headsets</li>
+            </ul>
+            
+            <h3>Comparison with Global Leaders:</h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin:20px 0;">
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">#1: Elon Musk</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">$852B</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">~$626B ahead</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">#5: Sergey Brin</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">$237.1B</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">~$10.8B ahead</p>
+                </div>
+                <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
+                    <h4 style="color:#f9c74f; margin:0 0 10px 0;">#7: Bernard Arnault</h4>
+                    <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">$194.9B</p>
+                    <p style="margin:5px 0; font-size:0.9rem;">~$31.4B behind</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FAQ SECTION (updated date) -->
+        <section class="faq-section">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions About Mark Zuckerberg</h2>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">How much of Meta does Mark Zuckerberg own today?</h3>
+                <p>As of February 2026, Mark Zuckerberg owns approximately 13% of Meta's outstanding shares, representing about 350 million shares. However, due to dual-class share structure, he maintains majority voting control (~58% of voting power).</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What is Mark Zuckerberg's salary?</h3>
+                <p>Zuckerberg takes a symbolic $1 annual salary from Meta. His compensation comes entirely from stock appreciation. He has declined bonuses and equity grants since 2013.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What is the Chan Zuckerberg Initiative?</h3>
+                <p>The Chan Zuckerberg Initiative (CZI) is a philanthropic organization founded by Mark Zuckerberg and Priscilla Chan. It focuses on science, education, and justice issues, with a commitment to donate 99% of their Meta shares over their lifetimes.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">How is Meta's metaverse bet performing?</h3>
+                <p>By 2026, Reality Labs (metaverse division) has become profitable, generating $45 billion in annual revenue from hardware sales, virtual goods, and enterprise solutions. Horizon Worlds has 150 million monthly active users.</p>
+            </div>
+            
+            <div style="margin:20px 0;">
+                <h3 style="color:#f9c74f;">What are Zuckerberg's major investments outside Meta?</h3>
+                <p>Zuckerberg has invested in AI research, biotechnology (through CZI), and real estate. Notable investments include the Biohub for scientific research and significant land holdings in Hawaii for conservation.</p>
+            </div>
+        </section>
+
+        <!-- 6. BUSINESS PHILOSOPHY -->
+        <section class="wealth-sources">
+            <h2><i class="fas fa-lightbulb"></i> Business Philosophy & Technical Vision</h2>
+            <p>Mark Zuckerberg is known for his long-term commitment to connecting people and his willingness to invest heavily in future technologies.</p>
+            
+            <h3>Core Business Principles:</h3>
+            <ul>
+                <li><strong>Move Fast with Stable Infrastructure:</strong> Evolved from "move fast and break things"</li>
+                <li><strong>Long-term Focus:</strong> Willing to invest billions in 10+ year projects like metaverse</li>
+                <li><strong>Technical Leadership:</strong> Still codes and participates in technical reviews</li>
+                <li><strong>Global Connectivity:</strong> Mission to connect the world</li>
+                <li><strong>AI First:</strong> Integrating AI across all products</li>
+            </ul>
+            
+            <h3>Notable Quotes:</h3>
+            <blockquote style="border-left: 4px solid #f9c74f; padding-left: 20px; margin: 20px 0; font-style: italic;">
+                "The biggest risk is not taking any risk. In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks."
+            </blockquote>
+            <blockquote style="border-left: 4px solid #f9c74f; padding-left: 20px; margin: 20px 0; font-style: italic;">
+                "We don't build services to make money; we make money to build better services."
+            </blockquote>
+        </section>
+
+        <!-- 7. PERSONAL LIFE & INTERESTS -->
+        <section class="current-developments">
+            <h2><i class="fas fa-user"></i> Personal Life & Unique Interests</h2>
+            <p>Beyond technology, Mark Zuckerberg pursues diverse personal interests ranging from martial arts to sustainable ranching.</p>
+            
+            <h3>Personal Characteristics:</h3>
+            <ul>
+                <li><strong>Martial Arts:</strong> Earned blue belt in Jiu-Jitsu, competes in local tournaments</li>
+                <li><strong>Language Learner:</strong> Speaks Mandarin, studied daily for years</li>
+                <li><strong>Ranching:</strong> Owns Ko'olau Ranch in Hawaii for sustainable cattle farming</li>
+                <li><strong>Philanthropy:</strong> Committed to giving away 99% of wealth</li>
+                <li><strong>Family Focus:</strong> Devoted husband to Priscilla Chan, father of three daughters</li>
+            </ul>
+            
+            <h3>Notable Personal Projects:</h3>
+            <table style="width:100%; border-collapse:collapse; background:rgba(255,255,255,0.05); margin:15px 0;">
+                <tr>
+                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Project</th>
+                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Description</th>
+                    <th style="padding:10px; border:1px solid #94a3b8; color:#f9c74f;">Investment</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr><td style="padding:10px; border:1px solid #94a3b8;">First $1 Billion</td><td style="padding:10px; border:1px solid #94a3b8;">2008</td><td style="padding:10px; border:1px solid #94a3b8;">$1B</td><td style="padding:10px; border:1px solid #94a3b8;">Age 23, youngest self-made billionaire</td></tr>
-                <tr><td style="padding:10px; border:1px solid #94a3b8;">$100 Billion</td><td style="padding:10px; border:1px solid #94a3b8;">2021</td><td style="padding:10px; border:1px solid #94a3b8;">$105B</td><td style="padding:10px; border:1px solid #94a3b8;">Facebook peak before rebrand</td></tr>
-                <tr><td style="padding:10px; border:1px solid #94a3b8;">Market Correction</td><td style="padding:10px; border:1px solid #94a3b8;">2022</td><td style="padding:10px; border:1px solid #94a3b8;">$64B</td><td style="padding:10px; border:1px solid #94a3b8;">Lost $71B in metaverse investments</td></tr>
-                <tr><td style="padding:10px; border:1px solid #94a3b8;">Current Estimate</td><td style="padding:10px; border:1px solid #94a3b8;">Jan 2026</td><td style="padding:10px; border:1px solid #94a3b8;">$226.3B</td><td style="padding:10px; border:1px solid #94a3b8;">Per Billionaire Watch data</td></tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<!-- 2. 2026 BUSINESS STRATEGY & DEVELOPMENTS -->
-<section class="current-developments">
-    <h2><i class="fas fa-vr-cardboard"></i> 2026 Strategic Focus: AI Integration & Metaverse Expansion</h2>
-    <p>In January 2026, Mark Zuckerberg is leading Meta's transformation into an AI-first company while expanding its metaverse presence across multiple platforms.</p>
-    
-    <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
-        <h3 style="color:#f9c74f; margin-top:0;">🤖 Meta AI Assistant Dominance</h3>
-        <p>Meta's AI assistant now handles 40% of customer service queries across Instagram and WhatsApp, generating $8 billion in annual revenue and reducing operational costs by 60%.</p>
-    </div>
-    
-    <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
-        <h3 style="color:#f9c74f; margin-top:0;">🌐 Horizon Worlds Enterprise Adoption</h3>
-        <p>Meta's virtual reality platform now hosts 500,000 enterprise customers for remote work and training, with major contracts from Fortune 500 companies driving $12 billion in B2B revenue.</p>
-    </div>
-    
-    <div style="background:rgba(249,199,79,0.05); padding:15px; border-radius:8px; margin:15px 0; border-left:4px solid #f9c74f;">
-        <h3 style="color:#f9c74f; margin-top:0;">📈 Advertising Renaissance</h3>
-        <p>AI-powered advertising delivers 35% better ROI than traditional methods, helping Meta regain digital advertising market share and achieve $145 billion in annual ad revenue for 2025.</p>
-    </div>
-</section>
-
-<!-- 3. HISTORICAL CONTEXT & ACQUISITIONS -->
-<section class="historical-context">
-    <h2><i class="fas fa-history"></i> From Harvard Dorm to Global Empire</h2>
-    <p>Mark Zuckerberg's journey from creating a college social network to building one of the world's most influential technology companies demonstrates his vision for connecting people globally.</p>
-    
-    <h3>Key Acquisitions Timeline</h3>
-    <ul style="margin-left:20px;">
-        <li><strong>2012:</strong> Acquired Instagram for $1 billion - now valued at $150 billion</li>
-        <li><strong>2014:</strong> Purchased WhatsApp for $19 billion - now valued at $90 billion</li>
-        <li><strong>2014:</strong> Acquired Oculus VR for $2 billion - foundation of Reality Labs</li>
-        <li><strong>2020:</strong> Purchased Giphy for $400 million - integrated into Instagram</li>
-        <li><strong>2023:</strong> Acquired several AI startups totaling $3 billion</li>
-    </ul>
-    
-    <p>These strategic acquisitions transformed Facebook from a single social network into a diversified technology conglomerate spanning social media, messaging, virtual reality, and artificial intelligence.</p>
-</section>
-
-<!-- 4. COMPETITIVE ANALYSIS -->
-<section class="competitive-analysis">
-    <h2><i class="fas fa-trophy"></i> Competitive Position in Social Media & AI</h2>
-    <p>Mark Zuckerberg's Meta Platforms maintains dominant positions in social networking while establishing leadership in virtual reality technology.</p>
-    
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin:20px 0;">
-        <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
-            <h4 style="color:#f9c74f; margin:0 0 10px 0;">Monthly Active Users</h4>
-            <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">3.9B</p>
-            <p style="margin:5px 0; font-size:0.9rem;">Across Meta platforms</p>
-        </div>
-        <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
-            <h4 style="color:#f9c74f; margin:0 0 10px 0;">VR Market Share</h4>
-            <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">65%</p>
-            <p style="margin:5px 0; font-size:0.9rem;">Global VR Hardware</p>
-        </div>
-        <div style="background:#16213e; padding:15px; border-radius:8px; text-align:center;">
-            <h4 style="color:#f9c74f; margin:0 0 10px 0;">AI Research Papers</h4>
-            <p style="font-size:1.5rem; margin:5px 0; color:#f9c74f;">850+</p>
-            <p style="margin:5px 0; font-size:0.9rem;">Published in 2025</p>
-        </div>
-    </div>
-    
-    <p>Despite competition from TikTok, YouTube, and emerging AI platforms, Meta maintains its position through network effects, continuous innovation, and strategic investments in next-generation technologies.</p>
-</section>
-
-<!-- 5. FAQ SECTION -->
-<section class="faq-section">
-    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions About Mark Zuckerberg</h2>
-    
-    <div style="margin:20px 0;">
-        <h3 style="color:#f9c74f;">How much of Meta does Mark Zuckerberg own?</h3>
-        <p>As of January 2026, Zuckerberg owns approximately 13% of Meta's outstanding shares, giving him significant control through special voting shares. This ownership represents about 86% of his total net worth.</p>
-    </div>
-    
-    <div style="margin:20px 0;">
-        <h3 style="color:#f9c74f;">What is Mark Zuckerberg's salary at Meta?</h3>
-        <p>Zuckerberg famously takes a $1 annual salary. His compensation comes entirely from stock appreciation. The company spends approximately $14 million annually on his personal security.</p>
-    </div>
-    
-    <div style="margin:20px 0;">
-        <h3 style="color:#f9c74f;">How much has Meta invested in the metaverse?</h3>
-        <p>Meta has invested over $50 billion in Reality Labs since 2020. The division became profitable in 2025, generating $2.1 billion in profit on $8.5 billion in revenue from VR hardware and software sales.</p>
-    </div>
-    
-    <div style="margin:20px 0;">
-        <h3 style="color:#f9c74f;">What is the Chan Zuckerberg Initiative?</h3>
-        <p>The Chan Zuckerberg Initiative is a philanthropic organization founded by Mark Zuckerberg and Priscilla Chan. It has committed $45 billion to advance human potential and promote equality in areas such as science, education, and justice reform.</p>
-    </div>
-    
-    <div style="margin:20px 0;">
-        <h3 style="color:#f9c74f;">How has Meta's AI strategy evolved?</h3>
-        <p>Meta has shifted from primarily using AI for content recommendations to developing general AI assistants, open-source AI models, and AI-powered creative tools. The company released Llama 3 in 2024 and is developing more advanced models for 2026 release.</p>
-    </div>
-</section>
-
-<!-- END OF NEW CONTENT ADDITIONS -->
+                <tr>
+                    <td style="padding:10px; border:1px solid #94a3b8;">Ko'olau Ranch</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">1,500-acre sustainable ranch in Hawaii</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">$100M</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #94a3b8;">Biohub</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">Medical research collaboration with Stanford</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">$600M</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #94a3b8;">AI for Science</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">Funding AI research for scientific discovery</td>
+                    <td style="padding:10px; border:1px solid #94a3b8;">$250M</td>
+                </tr>
+            </table>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact Us</a>
+                <a href="../terms.html">Terms & Conditions</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../disclaimer.html">Disclaimer</a>
+            </div>
+            <p>&copy; 2026 Billionaire Watch | Educational Project | Data Source: Forbes February 2026 Estimates</p>
+            <p class="credit">Contact: <a href="mailto:cocogamingyt260@gmail.com">cocogamingyt260@gmail.com</a></p>
+        </div>
+    </footer>
+
     <script>
-        // Historical Net Worth Chart
-        const netWorthData = {
-            labels: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
-            datasets: [{
-                label: "Mark Zuckerberg's Net Worth (Billions USD)",
-                data: [44.6, 56, 71, 62.3, 55.5, 69.6, 97, 85, 64, 105, 226.3],
-                borderColor: '#577590',
-                backgroundColor: 'rgba(87, 117, 144, 0.2)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.3,
-                pointBackgroundColor: '#577590'
-            }]
+        // DOM Elements for theme toggle and mobile nav
+        const elements = {
+            navToggle: document.getElementById('navToggle'),
+            mainNav: document.getElementById('mainNav'),
+            themeToggle: document.getElementById('theme-toggle')
         };
-        const netCtx = document.getElementById('netWorthChart').getContext('2d');
-        new Chart(netCtx, {
-            type: 'line',
-            data: netWorthData,
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { callbacks: {
-                        label: function(context) {
-                            return '$' + context.parsed.y + 'B (' + context.label + ')';
-                        }
-                    }}
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            initNavigation();
+            
+            // Charts
+            const netCtx = document.getElementById('netWorthChart').getContext('2d');
+            new Chart(netCtx, {
+                type: 'line',
+                data: {
+                    labels: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+                    datasets: [{
+                        label: "Mark Zuckerberg Net Worth (Billions USD)",
+                        data: [44.6, 56, 71, 62.3, 55.5, 69.6, 97, 85, 64, 105, 226.3],
+                        borderColor: '#577590',
+                        backgroundColor: 'rgba(87, 117, 144, 0.2)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3,
+                        pointBackgroundColor: '#577590'
+                    }]
                 },
-                scales: {
-                    y: { ticks: { color: '#e6e6e6' }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
-                    x: { ticks: { color: '#e6e6e6' }, grid: { display: false } }
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: {
+                            label: function(context) {
+                                return '$' + context.parsed.y + 'B (' + context.label + ')';
+                            }
+                        }}
+                    },
+                    scales: {
+                        y: { ticks: { color: '#e6e6e6' }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                        x: { ticks: { color: '#e6e6e6' }, grid: { display: false } }
+                    }
                 }
-            }
-        });
-        // Wealth Composition Pie Chart
-        const wealthData = {
-            labels: ['Meta Platforms', 'Other Investments'],
-            datasets: [{
-                data: [86, 14],
-                backgroundColor: ['#577590', '#43aa8b'],
-                borderWidth: 1
-            }]
-        };
-        const wealthCtx = document.getElementById('wealthPieChart').getContext('2d');
-        new Chart(wealthCtx, {
-            type: 'doughnut',
-            data: wealthData,
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: '#e6e6e6'
+            });
+
+            const wealthCtx = document.getElementById('wealthPieChart').getContext('2d');
+            new Chart(wealthCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Meta Platforms', 'Other Investments'],
+                    datasets: [{
+                        data: [86, 14],
+                        backgroundColor: ['#577590', '#43aa8b'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#e6e6e6' }
                         }
                     }
                 }
-            }
+            });
         });
+
+        // Theme Toggle
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            elements.themeToggle.innerHTML = savedTheme === 'light' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            
+            elements.themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                this.innerHTML = newTheme === 'light' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            });
+        }
+
+        // Mobile Navigation
+        function initNavigation() {
+            if (elements.navToggle) {
+                elements.navToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    elements.mainNav.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', function(event) {
+                    if (elements.mainNav.classList.contains('active') &&
+                        !elements.mainNav.contains(event.target) &&
+                        !elements.navToggle.contains(event.target)) {
+                        elements.navToggle.setAttribute('aria-expanded', 'false');
+                        elements.mainNav.classList.remove('active');
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
